@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка на аренду автомобиля</title>
+</head>
+<body>
+<form action="/test.php" method="post">
+    <p><label>Выберите город:<br>
+        <select name="city">
+            <option value="Novosibirsk" selected>Новосибирск</option>
+            <option value="Berdsk">Бердск</option>
+            <option value="Krasnoobsk">Краснообск</option>
+        </select>
+    </label></p>
+
+    <p><label>Выберите дни недели, в которые хотите арендовать автомобиль:<br>
+        <select name="weekDay" size="7" multiple>
+            <option value="1">Понедельник</option>
+            <option value="2">Вторник</option>
+            <option value="3">Среда</option>
+            <option value="4">Четверг</option>
+            <option value="5">Пятница</option>
+            <option value="6">Суббота</option>
+            <option value="7">Воскресенье</option>
+        </select>
+    </label></p>
+
+    <p>Выберите марку и модель автомобиля:<br>
+        <label>
+            <input type="radio" name="car" value="Solaris" checked="checked"> Hyundai Solaris
+        </label><br>
+        <label>
+            <input type="radio" name="car" value="Rio"> Kia Rio
+        </label><br>
+        <label>
+            <input type="radio" name="car" value="Corolla"> Toyota Corolla
+        </label>
+    </p>
+
+    <p>Укажите дополнительные опции:<br>
+        <label>
+            <input type="checkbox" name="insurance">Страховка
+        </label>
+        <label>
+            <input type="checkbox" name="navigator">Навигатор
+        </label>
+        <label>
+            <input type="checkbox" name="babyChair">Детское кресло
+        </label>
+    </p>
+
+    <p><label>
+        Ваше имя: <input type="text" name="clientName">
+    </label></p>
+
+    <p><label>
+        Контактный телефон: <input type="tel" name="clientPhone">
+    </label></p>
+
+    <p><label>
+        Ваш комментарий к заявке:<br>
+        <textarea name="comment" rows="5" cols="35"></textarea>
+    </label></p>
+
+    <button type="submit">Отправить заявку</button>
+    <p><a href="Cars.html">Вернуться к автомобилям</a></p>
+</form>
+</body>
+</html>
