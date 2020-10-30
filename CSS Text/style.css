@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #676565;
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.7143em;
+}
+
+div.background {
+    background-color: #FFEFD6;
+    padding-top: 6px;
+}
+
+div.content {
+    margin: 0 auto;
+    max-width: 824px;
+}
+
+div.section {
+    margin: 0 0 .9em 0;
+}
+
+h1.title {
+    font-size: 2.293em;
+    font-weight: 500;
+    line-height: 1.07em;
+    margin: 0 0 .42em 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+p.subtitle {
+    font-size: 1.3736em;
+    margin: 0 0 .42em;
+}
+
+.color-text {
+    color: #0394B5;
+    font-weight: 700;
+}
+
+.strike-text {
+    text-decoration: line-through;
+}
+
+p.indented {
+    font-size: 1.2589em;
+    margin: 0 0 .66em 0;
+    text-indent: 1em;
+    text-align: justify;
+}
