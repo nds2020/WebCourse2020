@@ -4,7 +4,7 @@
 
 body {
     color: #676565;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.7143em;
 }
@@ -38,6 +38,7 @@ p.subtitle {
 }
 
 .color-text {
+    font-family: HelveticaNeueCyr,sans-serif;
     color: #0394B5;
     font-weight: 700;
 }
