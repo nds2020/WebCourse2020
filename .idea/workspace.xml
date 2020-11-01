@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="сделал задачу CSS Text">
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="изменил шрифты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS Text/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Text/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS Text/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Text/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,9 @@
       <workItem from="1604069784042" duration="6650000" />
       <workItem from="1604078116237" duration="852000" />
       <workItem from="1604079059947" duration="522000" />
-      <workItem from="1604079657610" duration="2080000" />
+      <workItem from="1604079657610" duration="5471000" />
+      <workItem from="1604126097343" duration="190000" />
+      <workItem from="1604162038950" duration="15359000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604047969579</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="изменил шрифты">
+      <created>1604082139722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604082139722</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +123,8 @@
     <MESSAGE value="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html" />
     <MESSAGE value="добавил теги &lt;thead&gt; &lt;tbody&gt; в Cars.html" />
     <MESSAGE value="сделал задачу CSS Text" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделал задачу CSS Text" />
+    <MESSAGE value="изменил шрифты" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменил шрифты" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603473811477">
@@ -131,9 +139,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604047977134">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604082159360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604047977134" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604082159360" />
   </component>
 </project>

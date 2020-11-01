@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+table.employees {
+    border-collapse: collapse;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 860px;
+    width: 100%;
+}
+
+table.employees th {
+    background-color: #09d;
+    color: white;
+    font-weight: 600;
+}
+
+table.employees th, td {
+    border: 1px solid #cdcdcd;
+    height: 52px;
+    padding-left: 0.5em;
+    text-align: left;
+}
+
+table.employees tbody > tr:nth-child(odd) {
+    background-color: #efefef;
+}
