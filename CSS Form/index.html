@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+<h1 class="application-form">Отправить заявку</h1>
+<div class="background">
+    <form class="application-form" action="/test.php" method="post">
+        <div class="form-section">
+            <label>
+                <span>Ваше имя</span>
+                <input type="text" name="clientName" placeholder="Ваше имя *" required>
+            </label>
+        </div>
+        <div class="form-section">
+            <label>
+                <span>Ваш номер телефона</span>
+                <input type="tel" name="clientPhone" placeholder="Ваш номер телефона *" required>
+            </label>
+        </div>
+        <div class="form-section">
+            <label>
+                <span>Ваш email или VK</span>
+                <input type="text" name="clientMailOrVk" placeholder="Ваш email или VK *" required>
+            </label>
+        </div>
+        <div class="form-section">
+            <label>
+                <span>Комментарий</span>
+                <textarea name="comment" placeholder="Комментарий (не обязательно)" rows="6"></textarea>
+            </label>
+        </div>
+        <div class="form-section last">Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</div>
+        <button type="submit">Отправить заявку</button>
+    </form>
+</div>
+</body>
+</html>

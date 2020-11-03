@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #676565;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.background {
+    background-color: #ffefd6;
+    padding: 18px 0;
+}
+
+.application-form {
+    margin: 0 auto;
+    max-width: 830px;
+    padding: 0 15px;
+}
+
+h1.application-form {
+    margin-bottom: 4px;
+    font-size: 2.1em;
+    font-weight: 500;
+}
+
+.application-form label span {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.application-form input, textarea {
+    border: none;
+    display: block;
+    outline: none;
+    padding: 10px 14px 11px;
+    resize: vertical;
+    width: 100%;
+}
+
+.application-form button {
+    background-color: #09d;
+    border: none;
+    color: #fff;
+    display: block;
+    font-weight: 600;
+    margin-left: auto;
+    padding: 9px 14px;
+}
+
+.form-section {
+    margin: 0 0 19px 0;
+}
+
+.form-section.last {
+    margin-bottom: 14px;
+}
