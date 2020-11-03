@@ -19,8 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="изменил шрифты">
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу CSS таблица">
+      <change afterPath="$PROJECT_DIR$/CSS Form/form-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS Form/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS Form/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS Table/normalize.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS Text/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Text/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/normalize.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +60,19 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +90,7 @@
       <workItem from="1604079059947" duration="522000" />
       <workItem from="1604079657610" duration="5471000" />
       <workItem from="1604126097343" duration="190000" />
-      <workItem from="1604162038950" duration="15359000" />
+      <workItem from="1604162038950" duration="51412000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -101,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604082139722</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Сделал задачу CSS таблица">
+      <created>1604231384233</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604231384233</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +150,8 @@
     <MESSAGE value="добавил теги &lt;thead&gt; &lt;tbody&gt; в Cars.html" />
     <MESSAGE value="сделал задачу CSS Text" />
     <MESSAGE value="изменил шрифты" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменил шрифты" />
+    <MESSAGE value="Сделал задачу CSS таблица" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу CSS таблица" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603473811477">
@@ -139,9 +166,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604082159360">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604231395158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604082159360" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604231395158" />
   </component>
 </project>
