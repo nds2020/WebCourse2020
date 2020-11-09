@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу CSS форма">
-      <change afterPath="$PROJECT_DIR$/CSS Form/form-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSS Form/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSS Form/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS Table/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Table/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS Table/table-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Table/table-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS Text/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Text/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,19 +57,6 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,7 +74,8 @@
       <workItem from="1604079059947" duration="522000" />
       <workItem from="1604079657610" duration="5471000" />
       <workItem from="1604126097343" duration="190000" />
-      <workItem from="1604162038950" duration="51785000" />
+      <workItem from="1604162038950" duration="52952000" />
+      <workItem from="1604935134560" duration="4806000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -131,7 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604426480019</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Сделал задачу CSS форма">
+      <created>1604426928010</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604426928010</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Сделал задачу CSS форма">
+      <created>1604426982823</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604426982823</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,9 +174,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604231395158">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604427019757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604231395158" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604427019757" />
   </component>
 </project>
