@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="CSS Text&#10;1. Задал цвет фона всей странице&#10;2. Переместил файл normalize.css&#10;3. Изменил селекторы  &#10;4. Добавил горизонтальные отступы содержимому&#10;5. Теперь везде одинаковый font-family">
-      <change afterPath="$PROJECT_DIR$/Работа с массивами/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Работа с массивами/scrypt.js" afterDir="false" />
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу Работа с массивами">
+      <change afterPath="$PROJECT_DIR$/Работа с объектами/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Работа с объектами/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +40,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1jHvK6gXK3AT509U02OHfQyNJ4O" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -90,7 +93,7 @@
       <workItem from="1604079657610" duration="5471000" />
       <workItem from="1604126097343" duration="190000" />
       <workItem from="1604162038950" duration="52952000" />
-      <workItem from="1604935134560" duration="37170000" />
+      <workItem from="1604935134560" duration="40539000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -162,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604975588067</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Сделал задачу Работа с массивами">
+      <created>1605063091079</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605063091079</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +200,8 @@
     <MESSAGE value="Сделал задачу CSS форма" />
     <MESSAGE value="CSS table&#10;1. изменил селекторы&#10;2. добавил отступы таблице (сверху, слева, справа) и ячейкам (со всех сторон)&#10;3. высота ячеек теперь задана padding'ами&#10;4. все цвета теперь hex" />
     <MESSAGE value="CSS Text&#10;1. Задал цвет фона всей странице&#10;2. Переместил файл normalize.css&#10;3. Изменил селекторы  &#10;4. Добавил горизонтальные отступы содержимому&#10;5. Теперь везде одинаковый font-family" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS Text&#10;1. Задал цвет фона всей странице&#10;2. Переместил файл normalize.css&#10;3. Изменил селекторы  &#10;4. Добавил горизонтальные отступы содержимому&#10;5. Теперь везде одинаковый font-family" />
+    <MESSAGE value="Сделал задачу Работа с массивами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу Работа с массивами" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603473811477">
@@ -205,9 +216,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604975594640">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605063101740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604975594640" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605063101740" />
   </component>
 </project>
