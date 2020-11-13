@@ -2,10 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     var errorMessage = document.getElementById("error-message");
-    var hiddenElements = document.querySelectorAll("#celsius-degree ~ div");
+    var nondisplayedElements = document.querySelectorAll("#celsius-degree ~ div");
     var celsiusDegreeInputField = document.getElementById("celsius-degree-input-field");
     var convertButton = document.getElementById("convert-button");
-    var initialConvertButtonContent = convertButton.textContent;
+    var сonvertButtonInitialContent = convertButton.textContent;
 
     convertButton.addEventListener("click", function () {
         if (isNaN(celsiusDegreeInputField.value) || celsiusDegreeInputField.value === "") {
@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (convertButton.textContent === initialConvertButtonContent) {
-            [].forEach.call(hiddenElements, function (e) {
+        if (convertButton.textContent === сonvertButtonInitialContent) {
+            [].forEach.call(nondisplayedElements, function (e) {
                 e.style.display = "inline-block";
             });
 
@@ -24,13 +24,24 @@ document.addEventListener("DOMContentLoaded", function () {
             convertButton.textContent = "Ввести другое значение";
             errorMessage.style.visibility = "hidden";
         } else {
-            [].forEach.call(hiddenElements, function (e) {
+            [].forEach.call(nondisplayedElements, function (e) {
                 e.style.display = "none"
             });
 
             celsiusDegreeInputField.removeAttribute("readonly");
             celsiusDegreeInputField.value = "";
-            convertButton.textContent = initialConvertButtonContent;
+            convertButton.textContent = сonvertButtonInitialContent;
         }
+    });
+
+    /* Для решения 2 проблем при фокусе поля ввода:
+       1. курсор появляется в центре поля ввода в Edge (для поля задано CSS-свойство text-align: center),
+       2. во всех браузерах исчезает текст placeholder'а. */
+    celsiusDegreeInputField.addEventListener("focus", function () {
+        celsiusDegreeInputField.removeAttribute("placeholder");
+    });
+
+    celsiusDegreeInputField.addEventListener("blur", function () {
+        celsiusDegreeInputField.setAttribute("placeholder", "Введите значение");
     });
 });
