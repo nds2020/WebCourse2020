@@ -1,0 +1,59 @@
+body {
+    background-color: #FFEFD6;
+    color: #676565;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.content {
+    padding: 15px;
+}
+
+h2.title {
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.degrees {
+    margin: 15px 0;
+}
+
+.degrees > div {
+    display: inline-block;
+}
+
+.color-text {
+    color: #0394B5;
+    font-weight: 700;
+}
+
+.degrees input {
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.error {
+    color: #f00;
+    display: block;
+    margin: 3px auto 0;
+    font-size: 12px;
+    font-weight: 500;
+    visibility: hidden;
+}
+
+.equal-sign {
+    line-height: 74px;
+    vertical-align: bottom;
+}
+
+#celsius-degree ~ div {
+    display: none;
+}
+
+.button {
+    cursor: pointer;
+}

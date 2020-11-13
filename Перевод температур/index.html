@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевод температур</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="content">
+    <h2 class="title">Конвертер градуса Цельсия в градус Фаренгейта и Кельвин</h2>
+    <div class="degrees">
+        <div id="celsius-degree">
+            <label class="color-text">Градус Цельсия
+                <input id="celsius-degree-input-field" type="text" placeholder="Введите значение"/>
+                <span id="error-message" class="error">*Необходимо ввести число</span>
+            </label>
+        </div>
+        <div class="equal-sign">=</div>
+        <div id="fahrenheit-degree">
+            <label class="color-text">Градус Фаренгейта<br>
+                <input id="fahrenheit-degree-input-field" type="text" readonly>
+                <span class="error">&nbsp;</span>
+            </label>
+        </div>
+        <div class="equal-sign">=</div>
+        <div id="kelvin">
+            <label class="color-text">Кельвин<br>
+                <input id="kelvin-input-field" type="text" readonly>
+                <span class="error">&nbsp;</span>
+            </label>
+        </div>
+    </div>
+    <button id="convert-button" class="button" type="button">Конвертировать</button>
+</div>
+</body>
+</html>

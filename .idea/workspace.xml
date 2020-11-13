@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу Работа с массивами">
-      <change afterPath="$PROJECT_DIR$/Работа с объектами/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Работа с объектами/script.js" afterDir="false" />
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу Работа с объектами">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -43,6 +41,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Перевод температур/script.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1jHvK6gXK3AT509U02OHfQyNJ4O" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,21 +54,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Перевод температур" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\Перевод температур" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,7 +96,8 @@
       <workItem from="1604079657610" duration="5471000" />
       <workItem from="1604126097343" duration="190000" />
       <workItem from="1604162038950" duration="52952000" />
-      <workItem from="1604935134560" duration="40539000" />
+      <workItem from="1604935134560" duration="76025000" />
+      <workItem from="1605231899451" duration="15620000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -172,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605063091079</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Сделал задачу Работа с объектами">
+      <created>1605066291958</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605066291958</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +212,8 @@
     <MESSAGE value="CSS table&#10;1. изменил селекторы&#10;2. добавил отступы таблице (сверху, слева, справа) и ячейкам (со всех сторон)&#10;3. высота ячеек теперь задана padding'ами&#10;4. все цвета теперь hex" />
     <MESSAGE value="CSS Text&#10;1. Задал цвет фона всей странице&#10;2. Переместил файл normalize.css&#10;3. Изменил селекторы  &#10;4. Добавил горизонтальные отступы содержимому&#10;5. Теперь везде одинаковый font-family" />
     <MESSAGE value="Сделал задачу Работа с массивами" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу Работа с массивами" />
+    <MESSAGE value="Сделал задачу Работа с объектами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу Работа с объектами" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603473811477">
@@ -216,9 +228,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605063101740">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605066303448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605063101740" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605066303448" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1605237741151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605237741151" />
   </component>
 </project>
