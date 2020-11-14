@@ -6,6 +6,7 @@ body {
     color: #676565;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    padding-top: 10px;
 }
 
 .background {
@@ -25,16 +26,15 @@ h1.application-form {
     font-weight: 500;
 }
 
-.application-form label span {
-    display: block;
-    margin-bottom: 8px;
-    margin-top: 0;
+.application-form label {
     font-weight: 700;
 }
 
-.application-form input, textarea {
+.application-form input,
+.application-form textarea {
     border: none;
     display: block;
+    margin-top: 8px;
     outline: none;
     padding: 10px 14px 11px;
     resize: vertical;
@@ -42,13 +42,18 @@ h1.application-form {
 }
 
 .application-form button {
-    background-color: #09d;
+    background-color: #0394B5;
     border: none;
     color: #fff;
     display: block;
     font-weight: 600;
     margin-left: auto;
     padding: 9px 14px;
+}
+
+.application-form button:hover {
+    background-color: #0374B5;
+    cursor: pointer;
 }
 
 .form-section {
