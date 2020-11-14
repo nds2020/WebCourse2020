@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу Работа с объектами">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS Form/form-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Form/form-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS Form/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS Form/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="1. Теперь при наведении мыши на кнопку курсор превращается в руку и цвет кнопки меняется&#10;2. Убрал span =&gt; изменил селекторы&#10;3. Изменил селектор textarea на .application-form textarea&#10;4. Изменил цвет кнопки&#10;5. Добавил отступ от верхнего края браузера" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +95,7 @@
       <workItem from="1604126097343" duration="190000" />
       <workItem from="1604162038950" duration="52952000" />
       <workItem from="1604935134560" duration="76025000" />
-      <workItem from="1605231899451" duration="25627000" />
+      <workItem from="1605231899451" duration="26005000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -199,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605290276408</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="1. Теперь при наведении мыши на кнопку курсор превращается в руку и цвет кнопки меняется&#10;2. Убрал span =&gt; изменил селекторы&#10;3. Изменил селектор textarea на .application-form textarea&#10;4. Изменил цвет кнопки&#10;5. Добавил отступ от верхнего края браузера">
+      <created>1605374391377</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1605374391377</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +234,8 @@
     <MESSAGE value="Сделал задачу Работа с объектами" />
     <MESSAGE value="Сделал задачу Перевод температур" />
     <MESSAGE value="1. Изменил заголовок, названия переменных&#10;2. Теперь везде исчезает текст placeholder'a&#10;3. Теперь в Edge курсор появляется в центре поля ввода при фокусе" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Изменил заголовок, названия переменных&#10;2. Теперь везде исчезает текст placeholder'a&#10;3. Теперь в Edge курсор появляется в центре поля ввода при фокусе" />
+    <MESSAGE value="1. Теперь при наведении мыши на кнопку курсор превращается в руку и цвет кнопки меняется&#10;2. Убрал span =&gt; изменил селекторы&#10;3. Изменил селектор textarea на .application-form textarea&#10;4. Изменил цвет кнопки&#10;5. Добавил отступ от верхнего края браузера" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Теперь при наведении мыши на кнопку курсор превращается в руку и цвет кнопки меняется&#10;2. Убрал span =&gt; изменил селекторы&#10;3. Изменил селектор textarea на .application-form textarea&#10;4. Изменил цвет кнопки&#10;5. Добавил отступ от верхнего края браузера" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603473811477">
@@ -246,10 +250,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605290285767">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605374396782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605290285767" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605374396782" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1605237741151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

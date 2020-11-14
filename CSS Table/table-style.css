@@ -15,7 +15,8 @@
     width: 100%;
 }
 
-.employees-table th, .employees-table td {
+.employees-table th,
+.employees-table td {
     border: 1px solid #cdcdcd;
     padding: .7em .55em;
     text-align: left;
