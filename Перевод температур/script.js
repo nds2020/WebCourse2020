@@ -1,13 +1,13 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (e) {
     var errorMessage = document.getElementById("error-message");
     var nondisplayedElements = document.querySelectorAll("#celsius-degree ~ div");
     var celsiusDegreeInputField = document.getElementById("celsius-degree-input-field");
     var convertButton = document.getElementById("convert-button");
     var сonvertButtonInitialContent = convertButton.textContent;
 
-    convertButton.addEventListener("click", function () {
+    convertButton.addEventListener("click", function (e) {
         if (isNaN(celsiusDegreeInputField.value) || celsiusDegreeInputField.value === "") {
             errorMessage.style.visibility = "visible";
             return;
@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
     /* Для решения 2 проблем при фокусе поля ввода:
        1. курсор появляется в центре поля ввода в Edge (для поля задано CSS-свойство text-align: center),
        2. во всех браузерах исчезает текст placeholder'а. */
-    celsiusDegreeInputField.addEventListener("focus", function () {
+    celsiusDegreeInputField.addEventListener("focus", function (e) {
         celsiusDegreeInputField.removeAttribute("placeholder");
     });
 
-    celsiusDegreeInputField.addEventListener("blur", function () {
+    celsiusDegreeInputField.addEventListener("blur", function (e) {
         celsiusDegreeInputField.setAttribute("placeholder", "Введите значение");
     });
 });

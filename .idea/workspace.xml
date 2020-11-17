@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Отформатировал селектор так:&#10;.employees-table th,&#10;.employees-table td {">
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Добавил defer в тег script">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Перевод температур/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Перевод температур/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Перевод температур/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Перевод температур/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Работа с объектами/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Работа с объектами/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +42,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TODO List/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Перевод температур/script.js" root0="SKIP_INSPECTION" />
   </component>
@@ -98,7 +100,7 @@
       <workItem from="1604126097343" duration="190000" />
       <workItem from="1604162038950" duration="52952000" />
       <workItem from="1604935134560" duration="76025000" />
-      <workItem from="1605231899451" duration="26647000" />
+      <workItem from="1605231899451" duration="55382000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -212,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605374578644</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Добавил defer в тег script">
+      <created>1605375149486</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605375149486</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +255,8 @@
     <MESSAGE value="1. Изменил заголовок, названия переменных&#10;2. Теперь везде исчезает текст placeholder'a&#10;3. Теперь в Edge курсор появляется в центре поля ввода при фокусе" />
     <MESSAGE value="1. Теперь при наведении мыши на кнопку курсор превращается в руку и цвет кнопки меняется&#10;2. Убрал span =&gt; изменил селекторы&#10;3. Изменил селектор textarea на .application-form textarea&#10;4. Изменил цвет кнопки&#10;5. Добавил отступ от верхнего края браузера" />
     <MESSAGE value="Отформатировал селектор так:&#10;.employees-table th,&#10;.employees-table td {" />
-    <option name="LAST_COMMIT_MESSAGE" value="Отформатировал селектор так:&#10;.employees-table th,&#10;.employees-table td {" />
+    <MESSAGE value="Добавил defer в тег script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил defer в тег script" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603473811477">
@@ -261,10 +271,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605374587976">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605375153534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605374587976" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605375153534" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1605237741151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
