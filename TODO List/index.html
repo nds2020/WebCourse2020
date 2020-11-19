@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список заданий</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="main-container">
+    <h1>TODO List</h1>
+    <div class="container input">
+        <div class="text-section">
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <textarea id="task-input-textarea" placeholder="Напишите задание" rows="4"></textarea>
+            <div id="error-message" class="error">*Пожалуйста, напишите задание</div>
+        </div>
+        <div class="buttons-section">
+            <button id="add-button" class="button" type="button">Добавить</button>
+            <button id="clear-button" class="button" type="button">Очистить</button>
+        </div>
+    </div>
+    <div id="tasks-container" class="container"></div>
+</div>
+</body>
+</html>

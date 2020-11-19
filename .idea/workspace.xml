@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Добавил defer в тег script">
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Добавил аргумент функции-обработчику">
+      <change afterPath="$PROJECT_DIR$/TODO List/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Перевод температур/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Перевод температур/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Работа с объектами/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Работа с объектами/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +65,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -100,7 +104,7 @@
       <workItem from="1604126097343" duration="190000" />
       <workItem from="1604162038950" duration="52952000" />
       <workItem from="1604935134560" duration="76025000" />
-      <workItem from="1605231899451" duration="55382000" />
+      <workItem from="1605231899451" duration="101321000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -221,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605375149486</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Добавил аргумент функции-обработчику">
+      <created>1605628869756</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605628869756</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,9 +267,14 @@
     <MESSAGE value="1. Теперь при наведении мыши на кнопку курсор превращается в руку и цвет кнопки меняется&#10;2. Убрал span =&gt; изменил селекторы&#10;3. Изменил селектор textarea на .application-form textarea&#10;4. Изменил цвет кнопки&#10;5. Добавил отступ от верхнего края браузера" />
     <MESSAGE value="Отформатировал селектор так:&#10;.employees-table th,&#10;.employees-table td {" />
     <MESSAGE value="Добавил defer в тег script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил defer в тег script" />
+    <MESSAGE value="Добавил аргумент функции-обработчику" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил аргумент функции-обработчику" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1025" y="191" width="816" height="729" key="#Intentions" timestamp="1605770785979">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1025" y="191" width="816" height="729" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1605770785979" />
     <state x="440" y="94" key="#Project_Structure" timestamp="1603473811477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -271,10 +287,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605375153534">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1605771046461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605375153534" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605771046461" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605628880072">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605628880072" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1605237741151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
