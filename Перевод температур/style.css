@@ -38,7 +38,6 @@ h1.title {
 
 .error {
     color: #f00;
-    display: block;
     margin: 3px auto 0;
     font-size: 12px;
     font-weight: 500;
