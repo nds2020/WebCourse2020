@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 880px;
+    padding: 5px 10px 0;
+}
+
+.form {
+    margin: 0 auto 10px;
+    width: 50%;
+}
+
+.form-section {
+    margin-bottom: 5px;
+}
+
+.form-section.last {
+    margin-bottom: 15px;
+}
+
+.input-field {
+    border: 1px solid #000;
+    margin-top: 2px;
+    outline: none;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.form label,
+.filter label {
+    font-weight: 700;
+}
+
+.error {
+    color: #f00;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-left: 11px;
+    visibility: hidden;
+}
+
+.button {
+    background-color: #09d;
+    border: none;
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    margin: 0 auto;
+    min-width: 30%;
+    outline: none;
+    padding: .53em;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #05d;
+}
+
+.filter input {
+    display: inline-block;
+    width: 69%;
+}
+
+.filter button {
+    display: inline-block;
+    margin: 4px 0;
+    min-width: 15%;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th,
+.table td {
+    border: 1px solid #fff;
+    padding: .8em;
+    text-align: left;
+}
+
+.table th {
+    background-color: #09d;
+    border-bottom: 5px solid #fff;
+    color: #fff;
+    font-weight: 700;
+}
+
+.table td {
+    background-color: #d0cdca;
+}
+
+.table tbody {
+    counter-reset: item;
+}
+
+.entry-number::before {
+    counter-increment: item;
+    content: counter(item);
+}
+
+.table thead tr th:nth-child(1),
+.table thead tr th:nth-child(2),
+.table thead tr th:last-child,
+.table tbody tr td:nth-child(1),
+.table tbody tr td:nth-child(2),
+.table tbody tr td:last-child {
+    text-align: center;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background-color: #676565;
+}

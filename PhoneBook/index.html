@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Телефонная книга</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="node_modules/jquery/dist/jquery.js"></script>
+    <script defer src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div id="confirm-dialog" title="Подтверждение удаления" hidden>
+    <p><span class="ui-icon ui-icon-alert"></span></p>
+</div>
+<div class="content">
+    <div class="form">
+        <div class="form-section">
+            <label>Фамилия
+                <input type="text" id="last-name-field" class="input-field" placeholder="Введите фамилию">
+            </label>
+            <div id="last-name-field-error" class="error">&nbsp;</div>
+        </div>
+        <div class="form-section">
+            <label>Имя
+                <input type="text" id="first-name-field" class="input-field" placeholder="Введите имя">
+            </label>
+            <div id="first-name-field-error" class="error">&nbsp;</div>
+        </div>
+        <div class="form-section last">
+            <label>Номер телефона
+                <input type="tel" id="phone-field" class="input-field" placeholder="Введите телефон">
+            </label>
+            <div id="phone-field-error" class="error">&nbsp;</div>
+        </div>
+        <button type="button" id="add-button" class="button">Добавить</button>
+    </div>
+    <div class="filter">
+        <label>Фильтр<br>
+            <input type="text" id="filter-input-field" class="input-field" placeholder="Введите значение">
+            <button type="button" id="apply-button" class="button">Применить</button>
+            <button type="button" id="reset-button" class="button">Сбросить</button>
+        </label>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th><!--suppress HtmlFormInputWithoutLabel -->
+                <input type="checkbox" id="thead-checkbox">
+            </th>
+            <th>№</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Номер телефона</th>
+            <th>
+                <button type="button" id="thead-delete-button" class="delete-button">X</button>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
