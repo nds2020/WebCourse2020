@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу TODO List">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Перевод температур/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Перевод температур/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Перевод температур/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Перевод температур/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Работа с объектами/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Работа с объектами/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +42,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TODO List/script.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Перевод температур/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Перевод температур/script.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PhoneBook/script.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1jHvK6gXK3AT509U02OHfQyNJ4O" />
@@ -110,7 +108,7 @@
       <workItem from="1606144870756" duration="1849000" />
       <workItem from="1606146874338" duration="1728000" />
       <workItem from="1606148710474" duration="1787000" />
-      <workItem from="1606185144865" duration="35286000" />
+      <workItem from="1606185144865" duration="38288000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -245,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605781078988</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="1. Исправил опечатку в сonvertButtonInitialContent&#10;2. Код теперь работает со свойствами DOM-элементов вместо атрибутов">
+      <created>1606287458804</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1606287458804</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +287,8 @@
     <MESSAGE value="Добавил defer в тег script" />
     <MESSAGE value="Добавил аргумент функции-обработчику" />
     <MESSAGE value="Сделал задачу TODO List" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу TODO List" />
+    <MESSAGE value="1. Исправил опечатку в сonvertButtonInitialContent&#10;2. Код теперь работает со свойствами DOM-элементов вместо атрибутов" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Исправил опечатку в сonvertButtonInitialContent&#10;2. Код теперь работает со свойствами DOM-элементов вместо атрибутов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="191" width="816" height="729" key="#Intentions" timestamp="1605770785979">
@@ -309,10 +315,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605840363374" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605781085874">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606287475491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605781085874" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606287475491" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605955825631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
