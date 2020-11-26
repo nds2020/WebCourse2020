@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу TODO List">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task Underscore/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task Underscore/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task Underscore/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task Underscore/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -49,6 +46,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TODO List/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Task Underscore/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Перевод температур/script.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PhoneBook/script.js" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -63,7 +61,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TodoList jQuery" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -73,17 +71,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\TodoList jQuery" />
       <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\Перевод температур" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,7 +120,8 @@
       <workItem from="1606302413154" duration="454000" />
       <workItem from="1606302958320" duration="355000" />
       <workItem from="1606303339659" duration="1233000" />
-      <workItem from="1606305507279" duration="2087000" />
+      <workItem from="1606305507279" duration="8227000" />
+      <workItem from="1606382466889" duration="5961000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -268,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606290188108</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Сделал задачу PhoneBook">
+      <created>1606319678098</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1606319678098</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +316,8 @@
     <MESSAGE value="Сделал задачу TODO List" />
     <MESSAGE value="1. Исправил опечатку в сonvertButtonInitialContent&#10;2. Код теперь работает со свойствами DOM-элементов вместо атрибутов" />
     <MESSAGE value="Множество исправлений" />
-    <option name="LAST_COMMIT_MESSAGE" value="Множество исправлений" />
+    <MESSAGE value="Сделал задачу PhoneBook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу PhoneBook" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="191" width="816" height="729" key="#Intentions" timestamp="1605770785979">
@@ -350,14 +360,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606318790009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606290192666">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606319827591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606290192666" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606319827591" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606301169719" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1606383443181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606383443181" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605955825631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
