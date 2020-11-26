@@ -19,10 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу TODO List">
-      <change beforePath="$PROJECT_DIR$/.idea/WebCourse2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebCourse2020.iml" afterDir="false" />
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="trim() теперь из jQuery">
+      <change afterPath="$PROJECT_DIR$/TODO List jQuery/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List jQuery/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List jQuery/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List jQuery/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List jQuery/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List jQuery/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +124,7 @@
       <workItem from="1606302958320" duration="355000" />
       <workItem from="1606303339659" duration="1233000" />
       <workItem from="1606305507279" duration="8227000" />
-      <workItem from="1606382466889" duration="7807000" />
+      <workItem from="1606382466889" duration="10395000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -283,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606406822577</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="trim() теперь из jQuery">
+      <created>1606408391058</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1606408391058</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +335,8 @@
     <MESSAGE value="Множество исправлений" />
     <MESSAGE value="Сделал задачу PhoneBook" />
     <MESSAGE value="Сделал задачу Underscore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу Underscore" />
+    <MESSAGE value="trim() теперь из jQuery" />
+    <option name="LAST_COMMIT_MESSAGE" value="trim() теперь из jQuery" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="191" width="816" height="729" key="#Intentions" timestamp="1605770785979">
@@ -335,6 +347,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1603473811477" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1606408408578">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606408408578" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1606407424306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -367,10 +383,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606407574561" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606406925413">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606408412370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606406925413" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606408412370" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

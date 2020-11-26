@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список заданий</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.css">
+    <link rel="stylesheet" href="../TODO%20List/style.css">
+    <script defer src="node_modules/jquery/dist/jquery.js"></script>
+    <script defer src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div id="confirm-dialog" title="Подтверждение" hidden>
+    <p><span class="ui-icon ui-icon-alert"></span></p>
+</div>
+<div class="main-container">
+    <h1>TODO List</h1>
+    <div class="container input">
+        <div class="text-section">
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <textarea id="task-input-textarea" placeholder="Напишите задание" rows="4"></textarea>
+            <div id="error-message" class="error">*Пожалуйста, напишите задание</div>
+        </div>
+        <div class="buttons-section">
+            <button id="add-button" class="button" type="button">Добавить</button>
+            <button id="clear-button" class="button" type="button">Очистить</button>
+        </div>
+    </div>
+    <div id="tasks-container" class="container"></div>
+</div>
+</body>
+</html>
