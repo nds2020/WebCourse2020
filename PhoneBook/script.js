@@ -22,7 +22,7 @@ $(document).ready(function () {
         $(".input-field").not("#filter-input-field").each(function (field) {
             field = $(this);
 
-            if (field.val().trim().length === 0) {
+            if ($.trim(field.val()).length === 0) {
                 field.css("border", "1px solid #f00");
                 field.parent().next().css("visibility", "visible").text("*Поле должно быть заполнено");
                 hasEmptyField = true;
