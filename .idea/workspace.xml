@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="trim() теперь из jQuery">
-      <change afterPath="$PROJECT_DIR$/TODO List jQuery/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List jQuery/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List jQuery/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List jQuery/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List jQuery/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List jQuery/style.css" afterDir="false" />
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу TodoList jQuery">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -52,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/TODO List jQuery/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Перевод температур/script.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PhoneBook/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/TODO List Bootstrap/script.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1jHvK6gXK3AT509U02OHfQyNJ4O" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -65,12 +60,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/PhoneBook/node_modules/jquery" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="textmate" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -124,7 +119,9 @@
       <workItem from="1606302958320" duration="355000" />
       <workItem from="1606303339659" duration="1233000" />
       <workItem from="1606305507279" duration="8227000" />
-      <workItem from="1606382466889" duration="10395000" />
+      <workItem from="1606382466889" duration="37231000" />
+      <workItem from="1606703848875" duration="472000" />
+      <workItem from="1606708553380" duration="433000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -294,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606408391058</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Сделал задачу TodoList jQuery">
+      <created>1606411097096</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1606411097096</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +340,8 @@
     <MESSAGE value="Сделал задачу PhoneBook" />
     <MESSAGE value="Сделал задачу Underscore" />
     <MESSAGE value="trim() теперь из jQuery" />
-    <option name="LAST_COMMIT_MESSAGE" value="trim() теперь из jQuery" />
+    <MESSAGE value="Сделал задачу TodoList jQuery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу TodoList jQuery" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="191" width="816" height="729" key="#Intentions" timestamp="1605770785979">
@@ -347,6 +352,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1603473811477" />
+    <state x="733" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606703959136">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606703959136" />
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606703898314">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606703898314" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606704155835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606704155835" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1606408408578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -379,14 +396,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
-    <state x="461" y="165" width="1302" height="851" key="SettingsEditor" timestamp="1606407574561">
+    <state x="461" y="165" width="1302" height="851" key="SettingsEditor" timestamp="1606708797695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606407574561" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606408412370">
+    <state x="461" y="165" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606708797695" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606411103838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606408412370" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606411103838" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

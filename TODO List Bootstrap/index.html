@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Список заданий</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="node_modules/jquery/dist/jquery.js"></script>
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div id="dialog" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Подтверждение удаления</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="dialog-content"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="modal-dialog-yes-button" class="btn btn-primary">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mb-3">
+    <h1 class="col text-center font-weight-bold">TODO List</h1>
+    <div class="row pl-3 pr-3">
+        <div class="col pl-0 pr-2">
+            <!--suppress HtmlFormInputWithoutLabel-->
+            <textarea id="task-input-textarea" class="form-control pl-2 pr-2" rows="4"
+                      placeholder="Напишите задание"></textarea>
+            <p id="error-message" class="text-danger invisible pl-2">*Пожалуйста, напишите задание</p>
+        </div>
+        <div class="col-xs-3">
+            <button type="button" id="add-button" class="btn btn-primary btn-block btn-sm font-weight-bold">Добавить
+            </button>
+            <button type="button" id="clear-button" class="btn btn-danger btn-block btn-sm font-weight-bold">Очистить
+            </button>
+        </div>
+    </div>
+</div>
+<div id="tasks-container" class="container"></div>
+</body>
+</html>

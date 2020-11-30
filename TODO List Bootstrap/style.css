@@ -1,0 +1,8 @@
+.text-danger {
+    font-size: 12px;
+    text-align: left;
+}
+
+.text-section ul li {
+    white-space: pre-wrap;
+}
