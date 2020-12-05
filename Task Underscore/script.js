@@ -55,22 +55,28 @@
     ];
 
     // Посчитать средний возраст всех людей
-    var averageAge = _.reduce(list, function (memo, person) { return memo + person.age; }, 0) / _.size(list);
+    var averageAge = _.reduce(list, function (memo, person) {
+        return memo + person.age;
+    }, 0) / _.size(list);
 
     console.log("Средний возраст людей равен " + averageAge);
 
     // Получить список людей с возрастом от 20 до 30 включительно, отсортировать их по возрастанию возраста
     var peoplesFrom20To30YearsOld = _.chain(list)
-        .filter(function (person) { return person.age >= 20 && person.age <= 30; })
+        .filter(function (person) {
+            return person.age >= 20 && person.age <= 30;
+        })
         .sortBy("age")
         .value();
 
-    console.log("Получили список людей с возрастом от 20 до 30 лет и отсортировали их по возрастанию возраста:")
+    console.log("Получили список людей с возрастом от 20 до 30 лет и отсортировали их по возрастанию возраста:");
     console.log(peoplesFrom20To30YearsOld);
 
     // Добавить всем людям поле fullName, которое состоит из фамилии и имени через пробел
-    _.each(list, function (person) { person.fullName = person.lastName + " " + person.name; });
+    _.each(list, function (person) {
+        person.fullName = person.lastName + " " + person.name;
+    });
 
-    console.log("Добавили всем людям поле fullName (фамилия и имя через пробел):")
+    console.log("Добавили всем людям поле fullName (фамилия и имя через пробел):");
     console.log(list);
 })();

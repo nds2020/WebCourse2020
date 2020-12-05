@@ -20,13 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Переписал 2ю подзадачу">
-      <change afterPath="$PROJECT_DIR$/TODO List jQuery/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WebCourse2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebCourse2020.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBook/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBook/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO List jQuery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TODO List jQuery/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO List jQuery/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/TODO List jQuery/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task Underscore/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Task Underscore/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -130,7 +129,7 @@
       <workItem from="1606382466889" duration="37231000" />
       <workItem from="1606703848875" duration="472000" />
       <workItem from="1606708553380" duration="25229000" />
-      <workItem from="1607183349941" duration="2144000" />
+      <workItem from="1607183349941" duration="3372000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -321,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606823160091</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Кнопки подтверждения удаления теперь на русском языке&#10;Сделал отдельный файл CSS для этой задачи&#10;Собщение об ошибке теперь появляется и исчезает не засчет inline-стилей">
+      <created>1607185957215</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1607185957215</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +346,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="добавил теги &lt;thead&gt; &lt;tbody&gt; в Cars.html" />
     <MESSAGE value="сделал задачу CSS Text" />
     <MESSAGE value="изменил шрифты" />
     <MESSAGE value="Сделал задачу CSS таблица" />
@@ -365,7 +370,8 @@
     <MESSAGE value="Сделал задачу TodoList jQuery" />
     <MESSAGE value="Сделал задачу Bootstrap" />
     <MESSAGE value="Переписал 2ю подзадачу" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переписал 2ю подзадачу" />
+    <MESSAGE value="Кнопки подтверждения удаления теперь на русском языке&#10;Сделал отдельный файл CSS для этой задачи&#10;Собщение об ошибке теперь появляется и исчезает не засчет inline-стилей" />
+    <option name="LAST_COMMIT_MESSAGE" value="Кнопки подтверждения удаления теперь на русском языке&#10;Сделал отдельный файл CSS для этой задачи&#10;Собщение об ошибке теперь появляется и исчезает не засчет inline-стилей" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -424,14 +430,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
-    <state x="492" y="189" width="1302" height="851" key="SettingsEditor" timestamp="1607096832976">
+    <state x="492" y="189" width="1302" height="851" key="SettingsEditor" timestamp="1607186549536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607096832976" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606823168938">
+    <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607186015462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606823168938" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607186015462" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
