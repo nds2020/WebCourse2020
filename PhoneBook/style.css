@@ -34,6 +34,10 @@ body {
     width: 100%;
 }
 
+.red-border {
+    border: 1px solid #f00;
+}
+
 .form label,
 .filter label {
     font-weight: 700;
@@ -45,6 +49,9 @@ body {
     font-weight: 500;
     margin-bottom: 0;
     padding-left: 11px;
+}
+
+.hidden {
     visibility: hidden;
 }
 

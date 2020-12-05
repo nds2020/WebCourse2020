@@ -23,12 +23,12 @@ $(document).ready(function () {
             field = $(this);
 
             if ($.trim(field.val()).length === 0) {
-                field.css("border", "1px solid #f00");
-                field.parent().next().css("visibility", "visible").text("*Поле должно быть заполнено");
+                field.addClass("red-border");
+                field.parent().next().removeClass("hidden").text("*Поле должно быть заполнено");
                 hasEmptyField = true;
             } else {
-                field.css("border", "1px solid #000");
-                field.parent().next().css("visibility", "hidden");
+                field.removeClass("red-border");
+                field.parent().next().addClass("hidden");
             }
         });
 
@@ -40,8 +40,8 @@ $(document).ready(function () {
         var newPhone = phoneField.val();
 
         if ($.inArray(newPhone, phonesInBook) >= 0) {
-            phoneField.css("border", "1px solid #f00");
-            $("#phone-field-error").text("*Контакт с номером телефона " + newPhone + " уже есть в книге").css("visibility", "visible");
+            phoneField.addClass("red-border");
+            $("#phone-field-error").text("*Контакт с номером телефона " + newPhone + " уже есть в книге").removeClass("hidden");
             return;
         }
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
                 "<td class='last-name'></td>" +
                 "<td class='first-name'></td>" +
                 "<td class='phone'></td>" +
-                "<td><button type='button' class='delete-button'>X</button></td>")
+                "<td><button type='button' class='delete-button' title='Удалить'>X</button></td>")
             .appendTo($(".table tbody"));
 
         entry.find(".last-name").text(lastNameField.val());
@@ -65,12 +65,12 @@ $(document).ready(function () {
             confirmDialog.find("p").text("Вы уверены, что хотите удалить контакт?");
             confirmDialog.dialog({
                 buttons: {
-                    "yes": function () {
+                    "Да": function () {
                         phonesInBook.splice(phonesInBook.indexOf(newPhone), 1);
                         entry.remove();
                         $(this).dialog("close");
                     },
-                    "no": function () {
+                    "Нет": function () {
                         $(this).dialog("close");
                     }
                 }
@@ -84,13 +84,9 @@ $(document).ready(function () {
         /* Обработка чек-бокса в шапке таблицы (если его выбирают, то выбираются чек-боксы всех строк таблицы,
         eсли его убирают, то очищается выбор всех строк) */
         $("#thead-checkbox").click(function () {
-            var tableCheckboxes = $(".table tbody tr:not(:hidden) .checkbox");
+            var tableCheckboxes = $(".table tbody tr:visible .checkbox");
 
-            if ($(this).is(":checked")) {
-                tableCheckboxes.prop("checked", true);
-            } else {
-                tableCheckboxes.prop("checked", false);
-            }
+            $(this).is(":checked") ? tableCheckboxes.prop("checked", true) : tableCheckboxes.prop("checked", false);
         });
 
         // Обработка кнопки удаления всех выбранных строк
@@ -101,7 +97,7 @@ $(document).ready(function () {
                 confirmDialog.find("p").text("Вы уверены, что хотите удалить выбранные контакты?");
                 confirmDialog.dialog({
                     buttons: {
-                        "yes": function () {
+                        "Да": function () {
                             checkedEntries.find(".phone").each(function (cell) {
                                 cell = $(this);
                                 phonesInBook.splice(phonesInBook.indexOf(cell.text()), 1);
@@ -110,7 +106,7 @@ $(document).ready(function () {
                             $("#thead-checkbox").prop("checked", false);
                             $(this).dialog("close");
                         },
-                        "no": function () {
+                        "Нет": function () {
                             $(this).dialog("close");
                         }
                     }
@@ -132,6 +128,8 @@ $(document).ready(function () {
                     cell.parent().show();
                 }
             });
+
+            $(".table tbody tr:not(:visible) :checked").prop("checked", false);
 
             $("#reset-button").click(function () {
                 entries.show();
