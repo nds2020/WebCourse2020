@@ -18,12 +18,12 @@ $(document).ready(function () {
         var taskText = inputTextArea.val();
 
         if ($.trim(taskText).length === 0) {
-            errorMessage.css("visibility", "visible");
+            errorMessage.removeClass("hidden");
             inputTextArea.val("");
             return;
         }
 
-        errorMessage.css("visibility", "hidden");
+        errorMessage.addClass("hidden");
 
         var task = $("<div class='task'></div>");
 
@@ -39,11 +39,11 @@ $(document).ready(function () {
                 confirmDialogMessageTag.text("Вы уверены, что хотите удалить задание?");
                 confirmDialog.dialog({
                     buttons: {
-                        "yes": function () {
+                        "Да": function () {
                             task.remove();
                             $(this).dialog("close");
                         },
-                        "no": function () {
+                        "Нет": function () {
                             $(this).dialog("close");
                         }
                     }
@@ -63,11 +63,11 @@ $(document).ready(function () {
                         confirmDialogMessageTag.text("У задания нет текста. Удалить его?");
                         confirmDialog.dialog({
                             buttons: {
-                                "yes": function () {
+                                "Да": function () {
                                     task.remove();
                                     $(this).dialog("close");
                                 },
-                                "no": function () {
+                                "Нет": function () {
                                     $(this).dialog("close");
                                 }
                             }
@@ -84,11 +84,11 @@ $(document).ready(function () {
                     confirmDialogMessageTag.text("Вы уверены, что хотите отменить внесенные изменения?");
                     confirmDialog.dialog({
                         buttons: {
-                            "yes": function () {
+                            "Да": function () {
                                 setTask();
                                 $(this).dialog("close");
                             },
-                            "no": function () {
+                            "Нет": function () {
                                 $(this).dialog("close");
                             }
                         }
@@ -107,11 +107,11 @@ $(document).ready(function () {
             confirmDialogMessageTag.text("Вы уверены, что хотите удалить введенный текст?");
             confirmDialog.dialog({
                 buttons: {
-                    "yes": function () {
+                    "Да": function () {
                         inputTextArea.val("");
                         $(this).dialog("close");
                     },
-                    "no": function () {
+                    "Нет": function () {
                         $(this).dialog("close");
                     }
                 }

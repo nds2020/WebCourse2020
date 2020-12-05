@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFEFD6;
+    color: #676565;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.container.input {
+    font-size: 0;
+    margin-bottom: 15px;
+}
+
+.text-section {
+    display: inline-block;
+    font-size: 14px;
+    padding-right: 10px;
+    width: 80%;
+}
+
+.text-section textarea {
+    border: none;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
+
+.error {
+    color: #f00;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.text-section .error {
+    margin-top: 5px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.buttons-section {
+    display: inline-block;
+    font-size: 14px;
+    min-width: 20%;
+    vertical-align: top;
+}
+
+.button {
+    background-color: #0394B5;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 5px;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #0374B5;
+    cursor: pointer;
+}
+
+.buttons-section .button {
+    display: block;
+    margin: 0 0 5px;
+    width: 100%;
+}
+
+.task {
+    margin-bottom: 10px;
+}
+
+.text-section ul {
+    margin-top: 0;
+    padding-left: 20px;
+    text-align: justify;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
