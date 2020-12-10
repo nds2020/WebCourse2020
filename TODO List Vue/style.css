@@ -1,0 +1,13 @@
+[v-cloak] {
+    display: none;
+}
+
+.input-section .text-danger {
+    font-size: 14px;
+    text-align: left;
+}
+
+.tasks-section li {
+    white-space: pre-wrap;
+    word-break: break-all;
+}

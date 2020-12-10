@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Переписал 2ю подзадачу">
+      <change afterPath="$PROJECT_DIR$/TODO List Vue/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List Vue/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List Vue/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List Vue/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO List Vue/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WebCourse2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebCourse2020.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -44,10 +46,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/TODO List Vue/index.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TODO List/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/TODO List Vue/index.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TODO List jQuery/style.css" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/TODO List Vue/script.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Task Underscore/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List jQuery/script.js" root0="SKIP_INSPECTION" />
@@ -129,7 +130,7 @@
       <workItem from="1606382466889" duration="37231000" />
       <workItem from="1606703848875" duration="472000" />
       <workItem from="1606708553380" duration="25229000" />
-      <workItem from="1607183349941" duration="10109000" />
+      <workItem from="1607183349941" duration="63031000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -334,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607187035845</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="1. Добавил title кнопкам Х.&#10;2. Убрал if-else в обработчике чек-бокса шапки таблицы.&#10;3. Кнопки подтверждения удаления теперь на русском языке.&#10;4. Если отметить контакт для удаления, а потом произвести фильтрацию так, чтобы он перестал быть виден, то с него снимается отметка для удаления.&#10;5. Визуальное отображение ошибок при заполнении полей ввода теперь происходит не засчет inline-стилей.">
+      <created>1607193597063</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1607193597063</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +361,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="изменил шрифты" />
     <MESSAGE value="Сделал задачу CSS таблица" />
     <MESSAGE value="normalize.css перенес в папку задачи" />
     <MESSAGE value="Сделал задачу CSS форма" />
@@ -378,7 +385,8 @@
     <MESSAGE value="Переписал 2ю подзадачу" />
     <MESSAGE value="Кнопки подтверждения удаления теперь на русском языке&#10;Сделал отдельный файл CSS для этой задачи&#10;Собщение об ошибке теперь появляется и исчезает не засчет inline-стилей" />
     <MESSAGE value="Добавил пропущенные ;&#10;Изменил форматирование кода в подзадачах." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил пропущенные ;&#10;Изменил форматирование кода в подзадачах." />
+    <MESSAGE value="1. Добавил title кнопкам Х.&#10;2. Убрал if-else в обработчике чек-бокса шапки таблицы.&#10;3. Кнопки подтверждения удаления теперь на русском языке.&#10;4. Если отметить контакт для удаления, а потом произвести фильтрацию так, чтобы он перестал быть виден, то с него снимается отметка для удаления.&#10;5. Визуальное отображение ошибок при заполнении полей ввода теперь происходит не засчет inline-стилей." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Добавил title кнопкам Х.&#10;2. Убрал if-else в обработчике чек-бокса шапки таблицы.&#10;3. Кнопки подтверждения удаления теперь на русском языке.&#10;4. Если отметить контакт для удаления, а потом произвести фильтрацию так, чтобы он перестал быть виден, то с него снимается отметка для удаления.&#10;5. Визуальное отображение ошибок при заполнении полей ввода теперь происходит не засчет inline-стилей." />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -441,10 +449,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607187047625">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607193629935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607187047625" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607193629935" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

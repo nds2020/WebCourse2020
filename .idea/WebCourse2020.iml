@@ -4,6 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <content url="file://$MODULE_DIR$/PhoneBook/node_modules" />
+    <content url="file://$MODULE_DIR$/TODO List Vue/node_modules" />
     <content url="file://$MODULE_DIR$/TODO List jQuery/node_modules" />
     <content url="file://$MODULE_DIR$/Task Underscore/node_modules" />
     <orderEntry type="inheritedJdk" />

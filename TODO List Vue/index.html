@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Список заданий</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div v-cloak id="app" class="container">
+    <h1 class="mb-4 text-center font-weight-bold">TODO List</h1>
+
+    <div class="input-section container mb-3">
+        <div class="row">
+            <div class="col p-0">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <textarea v-model="newTodoText" class="form-control" rows="4" placeholder="Напишите задание"></textarea>
+                <p v-bind:class="{ invisible: hasInputText }" class="text-danger pl-2">*Пожалуйста, напишите задание</p>
+            </div>
+            <div class="col-auto pr-0">
+                <button @click="addNewTodoItem" type="button" class="btn btn-block btn-primary">Добавить</button>
+                <button @click="clearInputText" type="button" class="btn btn-block btn-outline-danger">Очистить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tasks-section container">
+        <div v-for="item in items" :key="item.id" class="row mb-3 pl-2">
+            <template v-if="item.isEditing">
+                <div class="col p-0">
+                    <!--suppress HtmlFormInputWithoutLabel -->
+                    <textarea v-model="item.editText" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="col-auto pr-0">
+                    <button @click="saveItemChanges(item)" type="button" class="btn btn-block btn-success">Сохранить
+                    </button>
+                    <button @click="cancelItemChanges(item)" type="button" class="btn btn-block btn-outline-danger">
+                        Отменить
+                    </button>
+                </div>
+            </template>
+            <template v-else>
+                <ul class="col pr-0">
+                    <li class="text-justify">{{ item.text }}</li>
+                </ul>
+                <div class="col-auto pr-0">
+                    <button @click="editItem(item)" type="button" class="btn btn-block btn-primary">Изменить</button>
+                    <button @click="deleteItem(item)" type="button" class="btn btn-block btn-danger">Удалить</button>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <modal ref="confirmDialog">
+        <template v-slot:title v-text="confirmDialogTitleText">
+            {{ confirmDialogTitleText }}
+        </template>
+        <template v-slot:body v-text="confirmDialogBodyText">
+            {{ confirmDialogBodyText }}
+        </template>
+    </modal>
+</div>
+<script type="text/x-template" id="modal-template">
+    <div ref="confirmDialogTemplate" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <slot name="title"></slot>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <slot name="body"></slot>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary col-3" data-dismiss="modal">Нет</button>
+                    <button @click="clickYes" type="button" class="btn btn-primary col-3">Да</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
