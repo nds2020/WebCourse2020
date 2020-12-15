@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Телефонная книга</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link>
+</head>
+<body>
+<div v-cloak id="app" class="container mt-2">
+    <div class="form mb-2">
+        <div class="row mb-2">
+            <div class="col-md-10 col-lg-8 m-0">
+                <label for="newLastName" class="mb-1">Фамилия</label>
+                <input @input="hasLastName = true" v-model.trim="newLastName" v-bind:class="{ 'red-border': !hasLastName }"
+                       type="text" class="form-control" id="newLastName" placeholder="Введите фамилию">
+                <div v-bind:class="{ 'd-none': hasLastName }" class="text-danger pl-2">*Необхоимо ввести фамилию</div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-10 col-lg-8 m-0">
+                <label for="newFirstName" class="mb-1">Имя</label>
+                <input @input="hasFirstName = true" v-model.trim="newFirstName"
+                       v-bind:class="{ 'red-border': !hasFirstName }"
+                       type="text" class="form-control" id="newFirstName" placeholder="Введите имя">
+                <div v-bind:class="{ 'd-none': hasFirstName}" class="text-danger pl-2">*Необхоимо ввести имя</div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-10 col-lg-8 m-0">
+                <label for="newPone" class="mb-1">Телефон</label>
+                <input @input="hasPhone = true" v-model.trim="newPhone" v-bind:class="{ 'red-border': !hasPhone }"
+                       type="tel" class="form-control" id="newPone" placeholder="Введите телефон">
+                <div v-bind:class="{ 'd-none': hasPhone }" v-text="newPhoneErrorText" class="text-danger pl-2">
+                    {{ newPhoneErrorText }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row-cols-2">
+            <button @click="addNewContact" type="button" class="btn btn-primary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
+                Добавить
+            </button>
+            <button @click="clearInputData" type="button"
+                    class="btn btn-outline-danger col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
+                Очистить
+            </button>
+        </div>
+    </div>
+
+    <div class="filter mb-2">
+        <div class="row">
+            <div class="col-md-10 col-lg-8">
+                <label for="filterField" class="mb-1">Фильтр</label>
+                <input v-model="filterText" @keypress.enter="applyFilter" type="text" class="form-control mb-1" id="filterField"
+                       placeholder="Введите значение">
+            </div>
+        </div>
+
+        <div class="row-cols-2">
+            <button @click="applyFilter" type="button" class="btn btn-primary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
+                Применить
+            </button>
+            <button @click="resetFilter" type="button" class="btn btn-secondary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
+                Сбросить
+            </button>
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+        <tr class="table-active">
+            <th scope="col"><!--suppress HtmlFormInputWithoutLabel -->
+                <input v-model="checkedTheadCheckbox" type="checkbox" id="theadCheckbox">
+            </th>
+            <th scope="col">№</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Номер телефона</th>
+            <th scope="col">
+                <button @click="deleteCheckedContacts" type="button" class="btn btn-sm btn-danger"
+                        title="Удалить отмеченные">x
+                </button>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="contact in contacts" :key="contact.id" v-bind:class="{ 'd-none': !contact.displayed }">
+            <td><!--suppress HtmlFormInputWithoutLabel -->
+                <input type="checkbox" v-model="contact.checked">
+            </td>
+            <td class="entry-number"></td>
+            <td>{{ contact.lastName }}</td>
+            <td>{{ contact.firstName }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>
+                <button @click="deleteContact(contact)" type="button" class="btn btn-sm btn-danger" title="Удалить">х
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <modal ref="confirmDialog">
+        <template v-slot:title v-text="confirmDialogTitleText">
+            {{ confirmDialogTitleText }}
+        </template>
+        <template v-slot:body v-text="confirmDialogBodyText">
+            {{ confirmDialogBodyText }}
+        </template>
+    </modal>
+</div>
+<script type="text/x-template" id="modal-template">
+    <div ref="confirmDialogTemplate" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <slot name="title"></slot>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <slot name="body"></slot>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary col-3" data-dismiss="modal">Нет</button>
+                    <button @click="clickYes" type="button" class="btn btn-primary col-3">Да</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -19,13 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Переписал 2ю подзадачу">
-      <change afterPath="$PROJECT_DIR$/TODO List Vue/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List Vue/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List Vue/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List Vue/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TODO List Vue/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WebCourse2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebCourse2020.iml" afterDir="false" />
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу TodoList Vue">
+      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -53,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Task Underscore/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List jQuery/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Перевод температур/script.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PhoneBook Vue/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/PhoneBook/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List Bootstrap/script.js" root0="SKIP_INSPECTION" />
   </component>
@@ -84,13 +84,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,7 +132,8 @@
       <workItem from="1606382466889" duration="37231000" />
       <workItem from="1606703848875" duration="472000" />
       <workItem from="1606708553380" duration="25229000" />
-      <workItem from="1607183349941" duration="63031000" />
+      <workItem from="1607183349941" duration="69179000" />
+      <workItem from="1607782970763" duration="80177000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -342,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607193597063</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Сделал задачу TodoList Vue">
+      <created>1607595198606</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1607595198606</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +371,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Сделал задачу CSS таблица" />
     <MESSAGE value="normalize.css перенес в папку задачи" />
     <MESSAGE value="Сделал задачу CSS форма" />
     <MESSAGE value="CSS table&#10;1. изменил селекторы&#10;2. добавил отступы таблице (сверху, слева, справа) и ячейкам (со всех сторон)&#10;3. высота ячеек теперь задана padding'ами&#10;4. все цвета теперь hex" />
@@ -386,7 +395,8 @@
     <MESSAGE value="Кнопки подтверждения удаления теперь на русском языке&#10;Сделал отдельный файл CSS для этой задачи&#10;Собщение об ошибке теперь появляется и исчезает не засчет inline-стилей" />
     <MESSAGE value="Добавил пропущенные ;&#10;Изменил форматирование кода в подзадачах." />
     <MESSAGE value="1. Добавил title кнопкам Х.&#10;2. Убрал if-else в обработчике чек-бокса шапки таблицы.&#10;3. Кнопки подтверждения удаления теперь на русском языке.&#10;4. Если отметить контакт для удаления, а потом произвести фильтрацию так, чтобы он перестал быть виден, то с него снимается отметка для удаления.&#10;5. Визуальное отображение ошибок при заполнении полей ввода теперь происходит не засчет inline-стилей." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Добавил title кнопкам Х.&#10;2. Убрал if-else в обработчике чек-бокса шапки таблицы.&#10;3. Кнопки подтверждения удаления теперь на русском языке.&#10;4. Если отметить контакт для удаления, а потом произвести фильтрацию так, чтобы он перестал быть виден, то с него снимается отметка для удаления.&#10;5. Визуальное отображение ошибок при заполнении полей ввода теперь происходит не засчет inline-стилей." />
+    <MESSAGE value="Сделал задачу TodoList Vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу TodoList Vue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -449,10 +459,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607193629935">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607595245338">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607193629935" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607595245338" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -465,9 +475,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606383443181" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605955825631">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup" timestamp="1608007053577">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1608007053577" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605955825631" />
   </component>
 </project>
