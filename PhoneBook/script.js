@@ -19,16 +19,14 @@ $(document).ready(function () {
         //Проверяем, что заполнены все поля формы
         var hasEmptyField = false;
 
-        $(".input-field").not("#filter-input-field").each(function (field) {
-            field = $(this);
-
-            if ($.trim(field.val()).length === 0) {
-                field.addClass("red-border");
-                field.parent().next().removeClass("hidden").text("*Поле должно быть заполнено");
+        $(".input-field").not("#filter-input-field").each(function () {
+            if ($.trim($(this).val()).length === 0) {
+                $(this).addClass("red-border");
+                $(this).parent().next().removeClass("hidden").text("*Поле должно быть заполнено");
                 hasEmptyField = true;
             } else {
-                field.removeClass("red-border");
-                field.parent().next().addClass("hidden");
+                $(this).removeClass("red-border");
+                $(this).parent().next().addClass("hidden");
             }
         });
 
@@ -39,7 +37,7 @@ $(document).ready(function () {
         // Проверяем, есть ли контакт с указанным номером телефона в книге
         var newPhone = phoneField.val();
 
-        if ($.inArray(newPhone, phonesInBook) >= 0) {
+        if (phonesInBook.indexOf(newPhone) >= 0) {
             phoneField.addClass("red-border");
             $("#phone-field-error").text("*Контакт с номером телефона " + newPhone + " уже есть в книге").removeClass("hidden");
             return;
@@ -54,7 +52,7 @@ $(document).ready(function () {
                 "<td class='last-name'></td>" +
                 "<td class='first-name'></td>" +
                 "<td class='phone'></td>" +
-                "<td><button type='button' class='delete-button' title='Удалить'>X</button></td>")
+                "<td><button type='button' class='delete-button' title='Удалить'>&#215;</button></td>")
             .appendTo($(".table tbody"));
 
         entry.find(".last-name").text(lastNameField.val());
@@ -80,61 +78,57 @@ $(document).ready(function () {
         lastNameField.val("");
         firstNameField.val("");
         phoneField.val("");
+    });
 
-        /* Обработка чек-бокса в шапке таблицы (если его выбирают, то выбираются чек-боксы всех строк таблицы,
-        eсли его убирают, то очищается выбор всех строк) */
-        $("#thead-checkbox").click(function () {
-            var tableCheckboxes = $(".table tbody tr:visible .checkbox");
+    /* Обработка чек-бокса в шапке таблицы (если его выбирают, то выбираются чек-боксы всех строк таблицы,
+    eсли его убирают, то очищается выбор всех строк) */
+    $("#thead-checkbox").click(function () {
+        $(".table tbody tr:visible .checkbox").prop("checked", $(this).is(":checked"));
+    });
 
-            $(this).is(":checked") ? tableCheckboxes.prop("checked", true) : tableCheckboxes.prop("checked", false);
-        });
+    // Обработка кнопки удаления всех выбранных строк
+    $("#thead-delete-button").click(function () {
+        var checkedEntries = $(".table tbody tr:has(:checked)");
 
-        // Обработка кнопки удаления всех выбранных строк
-        $("#thead-delete-button").click(function () {
-            var checkedEntries = $(".table tbody tr:has(:checked)");
+        if (checkedEntries.length !== 0) {
+            confirmDialog.find("p").text("Вы уверены, что хотите удалить выбранные контакты?");
+            confirmDialog.dialog({
+                buttons: {
+                    "Да": function () {
+                        checkedEntries.find(".phone").each(function () {
+                            phonesInBook.splice(phonesInBook.indexOf($(this).text()), 1);
+                        });
 
-            if (checkedEntries.length !== 0) {
-                confirmDialog.find("p").text("Вы уверены, что хотите удалить выбранные контакты?");
-                confirmDialog.dialog({
-                    buttons: {
-                        "Да": function () {
-                            checkedEntries.find(".phone").each(function (cell) {
-                                cell = $(this);
-                                phonesInBook.splice(phonesInBook.indexOf(cell.text()), 1);
-                            });
-                            checkedEntries.remove();
-                            $("#thead-checkbox").prop("checked", false);
-                            $(this).dialog("close");
-                        },
-                        "Нет": function () {
-                            $(this).dialog("close");
-                        }
+                        checkedEntries.remove();
+                        $("#thead-checkbox").prop("checked", false);
+                        $(this).dialog("close");
+                    },
+                    "Нет": function () {
+                        $(this).dialog("close");
                     }
-                });
+                }
+            });
+        }
+    });
+
+    // Обработка кнопок фильтра
+    $("#apply-button").click(function () {
+        var entries = $(".table tbody tr");
+        var filterText = $("#filter-input-field").val().toLowerCase();
+
+        entries.hide();
+
+        $(".last-name, .first-name, .phone").each(function () {
+            if ($(this).text().toLowerCase().indexOf(filterText) >= 0) {
+                $(this).parent().show();
             }
         });
 
-        // Обработка кнопок фильтра
-        $("#apply-button").click(function () {
-            var filterText = $("#filter-input-field").val().toLowerCase();
-            var entries = $(".table tbody tr");
+        $(".table tbody tr:not(:visible) :checked").prop("checked", false);
 
-            entries.hide();
-
-            $(".last-name, .first-name, .phone").each(function (cell) {
-                cell = $(this);
-
-                if (cell.text().toLowerCase().indexOf(filterText) >= 0) {
-                    cell.parent().show();
-                }
-            });
-
-            $(".table tbody tr:not(:visible) :checked").prop("checked", false);
-
-            $("#reset-button").click(function () {
-                entries.show();
-                $("#filter-input-field").val("");
-            });
+        $("#reset-button").click(function () {
+            entries.show();
+            $("#filter-input-field").val("");
         });
     });
 });
