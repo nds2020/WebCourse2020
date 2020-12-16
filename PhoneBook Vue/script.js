@@ -172,15 +172,19 @@ new Vue({
         },
 
         applyFilter: function () {
-            this.resetFilter(); // чтобы не нажимать кнопку "Сбросить", если удалили символ(ы) в строке фильтра
-
             var filterText = this.filterText.toLowerCase();
+
             this.contacts.forEach(function (contact) {
                 if (contact.lastName.toLowerCase().indexOf(filterText) === -1 &&
                     contact.firstName.toLowerCase().indexOf(filterText) === -1 &&
                     contact.phone.toLowerCase().indexOf(filterText) === -1) {
                     contact.displayed = false;
                     contact.checked = false;
+                } else {
+                    // чтобы не нажимать кнопку "Сбросить", если хотим, чтобы после удаления символа(ов)
+                    // в строке фильтра и повторной фильтрации отобразились ранее скрытые контакты, если
+                    // они удовлетворяют фильтру.
+                    contact.displayed = true;
                 }
             });
         },
@@ -190,9 +194,7 @@ new Vue({
                 contact.displayed = true;
             });
 
-            if (arguments.length !== 0) { // чтобы при нажатии кнопки "Применить" строка фильтра не стиралась
-                this.filterText = "";
-            }
+            this.filterText = "";
         }
     }
 });
