@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу TodoList Vue">
-      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook Vue/style.css" afterDir="false" />
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу PhoneBook Vue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook Vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook Vue/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO List Bootstrap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TODO List Bootstrap/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO List Bootstrap/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/TODO List Bootstrap/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -84,15 +82,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,7 +129,8 @@
       <workItem from="1606703848875" duration="472000" />
       <workItem from="1606708553380" duration="25229000" />
       <workItem from="1607183349941" duration="69179000" />
-      <workItem from="1607782970763" duration="80177000" />
+      <workItem from="1607782970763" duration="80413000" />
+      <workItem from="1608026907544" duration="13322000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -352,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607595198606</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Сделал задачу PhoneBook Vue">
+      <created>1608026468755</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1608026468755</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +375,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="normalize.css перенес в папку задачи" />
     <MESSAGE value="Сделал задачу CSS форма" />
     <MESSAGE value="CSS table&#10;1. изменил селекторы&#10;2. добавил отступы таблице (сверху, слева, справа) и ячейкам (со всех сторон)&#10;3. высота ячеек теперь задана padding'ами&#10;4. все цвета теперь hex" />
     <MESSAGE value="CSS Text&#10;1. Задал цвет фона всей странице&#10;2. Переместил файл normalize.css&#10;3. Изменил селекторы  &#10;4. Добавил горизонтальные отступы содержимому&#10;5. Теперь везде одинаковый font-family" />
@@ -396,7 +399,8 @@
     <MESSAGE value="Добавил пропущенные ;&#10;Изменил форматирование кода в подзадачах." />
     <MESSAGE value="1. Добавил title кнопкам Х.&#10;2. Убрал if-else в обработчике чек-бокса шапки таблицы.&#10;3. Кнопки подтверждения удаления теперь на русском языке.&#10;4. Если отметить контакт для удаления, а потом произвести фильтрацию так, чтобы он перестал быть виден, то с него снимается отметка для удаления.&#10;5. Визуальное отображение ошибок при заполнении полей ввода теперь происходит не засчет inline-стилей." />
     <MESSAGE value="Сделал задачу TodoList Vue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу TodoList Vue" />
+    <MESSAGE value="Сделал задачу PhoneBook Vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу PhoneBook Vue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -459,9 +463,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607595245338">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1608026948359">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608026948359" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607595245338" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />

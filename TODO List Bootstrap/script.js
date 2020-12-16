@@ -4,8 +4,9 @@ $(document).ready(function () {
     var inputTextArea = $("#task-input-textarea");
     var errorMessage = $("#error-message");
     var dialog = $("#dialog");
-    var dialogContent = $("#dialog-content");
-    var dialogYesButton = $("#modal-dialog-yes-button");
+    var dialogTitleText = $("#exampleModalLabel");
+    var dialogBodyText = $("#dialog-content");
+    var dialogFooter = $(".modal-footer");
 
     $("#add-button").click(function () {
         var taskText = inputTextArea.val();
@@ -30,10 +31,15 @@ $(document).ready(function () {
             task.find(".text").text(taskText);
 
             task.find(".delete-button").click(function () {
-                dialogContent.text("Вы уверены, что хотите удалить задание?");
+                dialogTitleText.text("Удаление задания");
+                dialogBodyText.text("Вы уверены, что хотите удалить задание?");
+                dialogFooter.html(
+                    "<button type='button' id='yes-button' class='btn btn-primary'>Да</button>" +
+                    "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Нет</button>"
+                );
                 dialog.modal("show");
 
-                dialogYesButton.click(function () {
+                dialogFooter.find("#yes-button").click(function () {
                     task.remove();
                     dialog.modal("hide");
                 });
@@ -50,10 +56,15 @@ $(document).ready(function () {
 
                 task.find(".save-button").click(function () {
                     if ($.trim(taskTextArea.val()).length === 0) {
-                        dialogContent.text("У задания нет текста. Удалить его?");
+                        dialogTitleText.text("Пустое задание");
+                        dialogBodyText.text("У задания нет текста. Удалить его?");
+                        dialogFooter.html(
+                            "<button type='button' id='yes-button' class='btn btn-primary'>Да</button>" +
+                            "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Нет</button>"
+                        );
                         dialog.modal("show");
 
-                        dialogYesButton.click(function () {
+                        dialogFooter.find("#yes-button").click(function () {
                             task.remove();
                             dialog.modal("hide");
                         });
@@ -66,10 +77,15 @@ $(document).ready(function () {
                 });
 
                 task.find(".cancel-button").click(function () {
-                    dialogContent.text("Вы уверены, что хотите отменить внесенные изменения?");
+                    dialogTitleText.text("Отмена изменений");
+                    dialogBodyText.text("Вы уверены, что хотите отменить внесенные изменения?");
+                    dialogFooter.html(
+                        "<button type='button' id='yes-button' class='btn btn-primary'>Да</button>" +
+                        "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Нет</button>"
+                    );
                     dialog.modal("show");
 
-                    dialogYesButton.click(function () {
+                    dialogFooter.find("#yes-button").click(function () {
                         setTask();
                         dialog.modal("hide");
                     });
@@ -84,10 +100,15 @@ $(document).ready(function () {
 
     $("#clear-button").click(function () {
         if (inputTextArea.val().length !== 0) {
-            dialogContent.text("Вы уверены, что хотите удалить введенный текст?");
+            dialogTitleText.text("Отмена ввода");
+            dialogBodyText.text("Вы уверены, что хотите удалить введенный текст?");
+            dialogFooter.html(
+                "<button type='button' id='yes-button' class='btn btn-primary'>Да</button>" +
+                "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Нет</button>"
+            );
             dialog.modal("show");
 
-            dialogYesButton.click(function () {
+            dialogFooter.find("#yes-button").click(function () {
                 inputTextArea.val("");
                 dialog.modal("hide");
             });
