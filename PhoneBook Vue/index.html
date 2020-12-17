@@ -26,7 +26,7 @@
                 <input @input="hasFirstName = true" v-model.trim="newFirstName"
                        v-bind:class="{ 'red-border': !hasFirstName }"
                        type="text" class="form-control" id="newFirstName" placeholder="Введите имя">
-                <div v-bind:class="{ 'd-none': hasFirstName}" class="text-danger pl-2">*Необхоимо ввести имя</div>
+                <div v-bind:class="{ 'd-none': hasFirstName }" class="text-danger pl-2">*Необхоимо ввести имя</div>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
                 <label for="newPone" class="mb-1">Телефон</label>
                 <input @input="hasPhone = true" v-model.trim="newPhone" v-bind:class="{ 'red-border': !hasPhone }"
                        type="tel" class="form-control" id="newPone" placeholder="Введите телефон">
-                <div v-bind:class="{ 'd-none': hasPhone }" v-text="newPhoneErrorText" class="text-danger pl-2">
+                <div v-bind:class="{ 'd-none': hasPhone }" class="text-danger pl-2">
                     {{ newPhoneErrorText }}
                 </div>
             </div>
@@ -106,10 +106,10 @@
     </table>
 
     <modal ref="confirmDialog">
-        <template v-slot:title v-text="confirmDialogTitleText">
+        <template v-slot:title>
             {{ confirmDialogTitleText }}
         </template>
-        <template v-slot:body v-text="confirmDialogBodyText">
+        <template v-slot:body>
             {{ confirmDialogBodyText }}
         </template>
     </modal>
