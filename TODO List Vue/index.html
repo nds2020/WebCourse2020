@@ -33,7 +33,8 @@
                     <textarea v-model="item.editText" class="form-control" rows="4"></textarea>
                 </div>
                 <div class="col-auto pr-0">
-                    <button @click="saveItemChanges(item)" type="button" class="btn btn-block btn-success">Сохранить
+                    <button @click="saveItemChanges(item)" type="button" class="btn btn-block btn-success">
+                        Сохранить
                     </button>
                     <button @click="cancelItemChanges(item)" type="button" class="btn btn-block btn-outline-danger">
                         Отменить
@@ -53,12 +54,8 @@
     </div>
 
     <modal ref="confirmDialog">
-        <template v-slot:title>
-            {{ confirmDialogTitleText }}
-        </template>
-        <template v-slot:body>
-            {{ confirmDialogBodyText }}
-        </template>
+        <template v-slot:title>{{ confirmDialogTitleText }}</template>
+        <template v-slot:body>{{ confirmDialogBodyText }}</template>
     </modal>
 </div>
 <script type="text/x-template" id="modal-template">

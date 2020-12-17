@@ -6,7 +6,6 @@
     <title>Телефонная книга</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <link>
 </head>
 <body>
 <div v-cloak id="app" class="container mt-2">
@@ -14,9 +13,10 @@
         <div class="row mb-2">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newLastName" class="mb-1">Фамилия</label>
-                <input @input="hasLastName = true" v-model.trim="newLastName" v-bind:class="{ 'red-border': !hasLastName }"
+                <input @input="hasLastName = true" v-model.trim="newLastName"
+                       v-bind:class="{ 'red-border': !hasLastName }"
                        type="text" class="form-control" id="newLastName" placeholder="Введите фамилию">
-                <div v-bind:class="{ 'd-none': hasLastName }" class="text-danger pl-2">*Необхоимо ввести фамилию</div>
+                <div v-show="!hasLastName" class="text-danger pl-2">*Необхоимо ввести фамилию</div>
             </div>
         </div>
 
@@ -26,28 +26,26 @@
                 <input @input="hasFirstName = true" v-model.trim="newFirstName"
                        v-bind:class="{ 'red-border': !hasFirstName }"
                        type="text" class="form-control" id="newFirstName" placeholder="Введите имя">
-                <div v-bind:class="{ 'd-none': hasFirstName }" class="text-danger pl-2">*Необхоимо ввести имя</div>
+                <div v-show="!hasFirstName" class="text-danger pl-2">*Необхоимо ввести имя</div>
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newPone" class="mb-1">Телефон</label>
-                <input @input="hasPhone = true" v-model.trim="newPhone" v-bind:class="{ 'red-border': !hasPhone }"
+                <input @input="hasPhone = true" v-model.trim="newPhone"
+                       v-bind:class="{ 'red-border': !hasPhone }"
                        type="tel" class="form-control" id="newPone" placeholder="Введите телефон">
-                <div v-bind:class="{ 'd-none': hasPhone }" class="text-danger pl-2">
-                    {{ newPhoneErrorText }}
-                </div>
+                <div v-show="!hasPhone" class="text-danger pl-2">{{ newPhoneErrorText }}</div>
             </div>
         </div>
 
         <div class="row-cols-2">
-            <button @click="addNewContact" type="button" class="btn btn-primary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
-                Добавить
+            <button @click="addNewContact" type="button"
+                    class="btn btn-primary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">Добавить
             </button>
             <button @click="clearInputData" type="button"
-                    class="btn btn-outline-danger col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
-                Очистить
+                    class="btn btn-outline-danger col-12 col-sm-4 col-md-3 col-lg-2 mb-1">Очистить
             </button>
         </div>
     </div>
@@ -56,17 +54,17 @@
         <div class="row">
             <div class="col-md-10 col-lg-8">
                 <label for="filterField" class="mb-1">Фильтр</label>
-                <input v-model="filterText" @keypress.enter="applyFilter" type="text" class="form-control mb-1" id="filterField"
-                       placeholder="Введите значение">
+                <input v-model="filterText" @keypress.enter="applyFilter"
+                       type="text" class="form-control mb-1" id="filterField" placeholder="Введите значение">
             </div>
         </div>
 
         <div class="row-cols-2">
-            <button @click="applyFilter" type="button" class="btn btn-primary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
-                Применить
+            <button @click="applyFilter" type="button"
+                    class="btn btn-primary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">Применить
             </button>
-            <button @click="resetFilter" type="button" class="btn btn-secondary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">
-                Сбросить
+            <button @click="resetFilter" type="button"
+                    class="btn btn-secondary col-12 col-sm-4 col-md-3 col-lg-2 mb-1">Сбросить
             </button>
         </div>
     </div>
@@ -98,7 +96,8 @@
             <td>{{ contact.firstName }}</td>
             <td>{{ contact.phone }}</td>
             <td>
-                <button @click="deleteContact(contact)" type="button" class="btn btn-sm btn-danger" title="Удалить">&#215;
+                <button @click="deleteContact(contact)"
+                        type="button" class="btn btn-sm btn-danger" title="Удалить">&#215;
                 </button>
             </td>
         </tr>
@@ -106,12 +105,8 @@
     </table>
 
     <modal ref="confirmDialog">
-        <template v-slot:title>
-            {{ confirmDialogTitleText }}
-        </template>
-        <template v-slot:body>
-            {{ confirmDialogBodyText }}
-        </template>
+        <template v-slot:title>{{ confirmDialogTitleText }}</template>
+        <template v-slot:body>{{ confirmDialogBodyText }}</template>
     </modal>
 </div>
 <script type="text/x-template" id="modal-template">

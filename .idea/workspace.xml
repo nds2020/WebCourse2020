@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="1. Больше никаких if-else и тернарных операторов для чекбокса шапки таблицы. Все делает 1 функция.&#10;2. cell = $(this) и подобное удалил&#10;3. Вместо $.inArray теперь indexOf">
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Исправления по синтаксису">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBook Vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook Vue/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO List Vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TODO List Vue/index.html" afterDir="false" />
@@ -129,7 +129,7 @@
       <workItem from="1606708553380" duration="25229000" />
       <workItem from="1607183349941" duration="69179000" />
       <workItem from="1607782970763" duration="80413000" />
-      <workItem from="1608026907544" duration="25187000" />
+      <workItem from="1608026907544" duration="28295000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -376,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608121406126</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Исправления по синтаксису">
+      <created>1608173168036</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1608173168036</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +402,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Сделал задачу Работа с массивами" />
     <MESSAGE value="Сделал задачу Работа с объектами" />
     <MESSAGE value="Сделал задачу Перевод температур" />
     <MESSAGE value="1. Изменил заголовок, названия переменных&#10;2. Теперь везде исчезает текст placeholder'a&#10;3. Теперь в Edge курсор появляется в центре поля ввода при фокусе" />
@@ -420,7 +426,8 @@
     <MESSAGE value="1. Кнопки в диалоге удаления теперь на русском&#10;2. При отмене редактирования в диалоге теперь верный заголовок&#10;3. Отмена редактирования одной из заметок теперь не влияет на остальные заметки" />
     <MESSAGE value="Небольшие исправления" />
     <MESSAGE value="1. Больше никаких if-else и тернарных операторов для чекбокса шапки таблицы. Все делает 1 функция.&#10;2. cell = $(this) и подобное удалил&#10;3. Вместо $.inArray теперь indexOf" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Больше никаких if-else и тернарных операторов для чекбокса шапки таблицы. Все делает 1 функция.&#10;2. cell = $(this) и подобное удалил&#10;3. Вместо $.inArray теперь indexOf" />
+    <MESSAGE value="Исправления по синтаксису" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправления по синтаксису" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -484,10 +491,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1608122411128">
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1608173173901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608122411128" />
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608173173901" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607595245338" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
