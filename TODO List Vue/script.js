@@ -53,15 +53,14 @@ new Vue({
             this.newId++
         },
 
-        deleteItem: function (item) {
-            this.confirmDialogTitleText = "Удаление задания";
-            this.confirmDialogBodyText = "Вы уверены, что хотите удалить задание?";
+        deleteItem: function (itemForDelete, confirmDialogTitleText, confirmDialogBodyText) {
+            this.confirmDialogTitleText = confirmDialogTitleText ? confirmDialogTitleText : "Удаление задания";
+            this.confirmDialogBodyText = confirmDialogBodyText ? confirmDialogBodyText : "Вы уверены, что хотите удалить задание?";
 
             var self = this;
-
             this.$refs.confirmDialog.show(function () {
-                self.items = self.items.filter(function (x) {
-                    return x !== item;
+                self.items = self.items.filter(function (item) {
+                    return item !== itemForDelete;
                 });
             });
         },
@@ -72,7 +71,6 @@ new Vue({
                 this.confirmDialogBodyText = "Вы уверены, что хотите удалить введенный текст?";
 
                 var self = this;
-
                 this.$refs.confirmDialog.show(function () {
                     self.newTodoText = "";
                 });
@@ -85,17 +83,7 @@ new Vue({
 
         saveItemChanges: function (item) {
             if (item.editText.trim().length === 0) {
-                this.confirmDialogTitleText = "Пустое задание";
-                this.confirmDialogBodyText = "У задания нет текста. Удалить его?";
-
-                var self = this;
-
-                this.$refs.confirmDialog.show(function () {
-                    self.items = self.items.filter(function (i) {
-                        return i !== item;
-                    });
-                });
-
+                this.deleteItem(item, "Пустое задание", "У задания нет текста. Удалить его?");
                 return;
             }
 
@@ -113,6 +101,6 @@ new Vue({
                     item.isEditing = false;
                 });
             }
-        },
+        }
     }
 });
