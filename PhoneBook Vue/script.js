@@ -71,31 +71,11 @@ new Vue({
     methods: {
         addNewContact: function () {
             // поверяем, что все поля формы заполнены
-            var hasEmptyField = false;
+            this.hasLastName = this.newLastName ? true : false;
+            this.hasFirstName = this.newFirstName ? true : false;
+            this.newPhoneErrorText = (this.hasPhone = this.newPhone ? true : false) ? "" : "*Необходимо ввести телефон";
 
-            if (!this.newLastName) {
-                this.hasLastName = false;
-                hasEmptyField = true;
-            } else {
-                this.hasLastName = true;
-            }
-
-            if (!this.newFirstName) {
-                this.hasFirstName = false;
-                hasEmptyField = true;
-            } else {
-                this.hasFirstName = true;
-            }
-
-            if (!this.newPhone) {
-                this.hasPhone = false;
-                this.newPhoneErrorText = "*Необходимо ввести телефон";
-                hasEmptyField = true;
-            } else {
-                this.hasPhone = true;
-            }
-
-            if (hasEmptyField) {
+            if (!this.hasLastName || !this.hasFirstName || !this.hasPhone) {
                 return;
             }
 
@@ -127,7 +107,7 @@ new Vue({
         },
 
         clearInputData: function () {
-            if (this.newLastName !== "" || this.newFirstName !== "" || this.newPhone !== "") {
+            if (this.newLastName || this.newFirstName || this.newPhone) {
                 this.confirmDialogTitleText = "Отмена ввода";
                 this.confirmDialogBodyText = "Вы уверены, что хотите удалить введенные данные?";
 
@@ -143,14 +123,14 @@ new Vue({
             }
         },
 
-        deleteContact: function (contact) {
+        deleteContact: function (contactForDelete) {
             this.confirmDialogTitleText = "Удаление контакта";
             this.confirmDialogBodyText = "Вы уверены, что хотите удалить контакт?";
 
             var self = this;
             this.$refs.confirmDialog.show(function () {
-                self.contacts = self.contacts.filter(function (с) {
-                    return с !== contact;
+                self.contacts = self.contacts.filter(function (contact) {
+                    return contact !== contactForDelete;
                 });
             });
         },

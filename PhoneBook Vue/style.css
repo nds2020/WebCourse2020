@@ -9,12 +9,3 @@
 .form .red-border {
     border: 1px solid #f00;
 }
-
-.table tbody {
-    counter-reset: contact;
-}
-
-.entry-number::before {
-    counter-increment: contact;
-    content: counter(contact);
-}

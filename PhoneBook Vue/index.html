@@ -32,10 +32,10 @@
 
         <div class="row mb-3">
             <div class="col-md-10 col-lg-8 m-0">
-                <label for="newPone" class="mb-1">Телефон</label>
+                <label for="newPhone" class="mb-1">Телефон</label>
                 <input @input="hasPhone = true" v-model.trim="newPhone"
                        v-bind:class="{ 'red-border': !hasPhone }"
-                       type="tel" class="form-control" id="newPone" placeholder="Введите телефон">
+                       type="tel" class="form-control" id="newPhone" placeholder="Введите телефон">
                 <div v-show="!hasPhone" class="text-danger pl-2">{{ newPhoneErrorText }}</div>
             </div>
         </div>
@@ -72,14 +72,15 @@
     <table class="table table-hover">
         <thead>
         <tr class="table-active">
-            <th scope="col"><!--suppress HtmlFormInputWithoutLabel -->
+            <th @click="checkedTheadCheckbox = !checkedTheadCheckbox">
+                <!--suppress HtmlFormInputWithoutLabel -->
                 <input v-model="checkedTheadCheckbox" type="checkbox" id="theadCheckbox">
             </th>
-            <th scope="col">№</th>
-            <th scope="col">Фамилия</th>
-            <th scope="col">Имя</th>
-            <th scope="col">Номер телефона</th>
-            <th scope="col">
+            <th>№</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Номер телефона</th>
+            <th>
                 <button @click="deleteCheckedContacts" type="button" class="btn btn-sm btn-danger"
                         title="Удалить отмеченные">&#215;
                 </button>
@@ -87,11 +88,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="contact in contacts" :key="contact.id" v-bind:class="{ 'd-none': !contact.displayed }">
-            <td><!--suppress HtmlFormInputWithoutLabel -->
+        <tr v-for="(contact, index) in contacts" :key="contact.id" v-bind:class="{ 'd-none': !contact.displayed }">
+            <td @click="contact.checked = !contact.checked">
+                <!--suppress HtmlFormInputWithoutLabel -->
                 <input type="checkbox" v-model="contact.checked">
             </td>
-            <td class="entry-number"></td>
+            <td>{{ index + 1 }}</td>
             <td>{{ contact.lastName }}</td>
             <td>{{ contact.firstName }}</td>
             <td>{{ contact.phone }}</td>
