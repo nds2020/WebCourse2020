@@ -119,12 +119,10 @@ new Vue({
             var self = this;
             this.service.getContacts(this.term).done(function (response) {
                 self.contacts = response;
-                self.contacts.forEach(function (contact) {
-                    self.checkedContactsIds.forEach(function (id) {
-                        if (contact.id === id) {
-                            contact.checked = true;
-                        }
-                    });
+                self.contacts.forEach(function(contact) {
+                    if (self.checkedContactsIds.includes(contact.id)) {
+                        contact.checked = true;
+                    }
                 });
             }).fail(function () {
                 self.prepareDialog(false, "Ошибка сервера", "Не удалось загрузить список контактов");
