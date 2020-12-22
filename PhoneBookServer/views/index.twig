@@ -7,30 +7,30 @@
         <div class="row mb-2">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="lastName" class="mb-1">Фамилия</label>
-                <input @input="hasLastName = true" v-model.trim="lastName"
-                       v-bind:class="{ 'red-border': !hasLastName }"
+                <input v-model.trim="lastName"
+                       v-bind:class="lastName === null ? '' : lastName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="lastName" placeholder="Введите фамилию">
-                <div v-show="!hasLastName" class="text-danger pl-2">*Необхоимо ввести фамилию</div>
+                <div v-show="!lastName" class="invalid-feedback pl-2">*Необхоимо ввести фамилию</div>
             </div>
         </div>
 
         <div class="row mb-2">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="firstName" class="mb-1">Имя</label>
-                <input @input="hasFirstName = true" v-model.trim="firstName"
-                       v-bind:class="{ 'red-border': !hasFirstName }"
+                <input v-model.trim="firstName"
+                       v-bind:class="firstName === null ? '' : firstName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="firstName" placeholder="Введите имя">
-                <div v-show="!hasFirstName" class="text-danger pl-2">*Необхоимо ввести имя</div>
+                <div v-show="!firstName" class="invalid-feedback pl-2">*Необхоимо ввести имя</div>
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="phone" class="mb-1">Телефон</label>
-                <input @input="hasPhone = true" v-model.trim="phone"
-                       v-bind:class="{ 'red-border': !hasPhone }"
+                <input v-model.trim="phone"
+                       v-bind:class="phone === null ? '' : phone ? 'is-valid' : 'is-invalid'"
                        type="tel" class="form-control" id="phone" placeholder="Введите телефон">
-                <div v-show="!hasPhone" class="text-danger pl-2">*Необходимо ввести телефон</div>
+                <div v-show="!phone" class="invalid-feedback pl-2">*Необходимо ввести телефон</div>
             </div>
         </div>
 

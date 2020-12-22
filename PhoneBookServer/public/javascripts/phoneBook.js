@@ -61,12 +61,9 @@ new Vue({
     data: {
         contacts: [],
         checkedContactsIds: [],
-        lastName: "",
-        firstName: "",
-        phone: "",
-        hasLastName: true,
-        hasFirstName: true,
-        hasPhone: true,
+        lastName: null,
+        firstName: null,
+        phone: null,
         term: "",
         dialogTitleText: "",
         dialogBodyText: "",
@@ -119,7 +116,7 @@ new Vue({
             var self = this;
             this.service.getContacts(this.term).done(function (response) {
                 self.contacts = response;
-                self.contacts.forEach(function(contact) {
+                self.contacts.forEach(function (contact) {
                     if (self.checkedContactsIds.includes(contact.id)) {
                         contact.checked = true;
                     }
@@ -136,11 +133,11 @@ new Vue({
         },
 
         addNewContact: function () {
-            this.hasLastName = this.lastName ? true : false;
-            this.hasFirstName = this.firstName ? true : false;
-            this.hasPhone = this.phone ? true : false;
+            this.lastName = this.lastName ? this.lastName : "";
+            this.firstName = this.firstName ? this.firstName : "";
+            this.phone = this.phone ? this.phone : "";
 
-            if (!this.hasLastName || !this.hasFirstName || !this.hasPhone) {
+            if (!this.lastName || !this.firstName || !this.phone) {
                 return;
             }
 
@@ -159,9 +156,9 @@ new Vue({
                     return;
                 }
 
-                self.lastName = "";
-                self.firstName = "";
-                self.phone = "";
+                self.lastName = null;
+                self.firstName = null;
+                self.phone = null;
 
                 self.loadContacts();
             }).fail(function () {
@@ -176,12 +173,9 @@ new Vue({
 
                 var self = this;
                 this.$refs.modalDialog.show(function () {
-                    self.lastName = "";
-                    self.firstName = "";
-                    self.phone = "";
-                    self.hasLastName = true;
-                    self.hasFirstName = true;
-                    self.hasPhone = true;
+                    self.lastName = null;
+                    self.firstName = null;
+                    self.phone = null;
                 });
             }
         },
