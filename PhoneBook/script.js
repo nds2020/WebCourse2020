@@ -20,13 +20,15 @@ $(document).ready(function () {
         var hasEmptyField = false;
 
         $(".input-field").not("#filter-input-field").each(function () {
-            if ($.trim($(this).val()).length === 0) {
-                $(this).addClass("red-border");
-                $(this).parent().next().removeClass("hidden").text("*Поле должно быть заполнено");
+            var field = $(this);
+
+            if ($.trim(field.val()).length === 0) {
+                field.addClass("red-border");
+                field.parent().next().removeClass("hidden").text("*Поле должно быть заполнено");
                 hasEmptyField = true;
             } else {
-                $(this).removeClass("red-border");
-                $(this).parent().next().addClass("hidden");
+                field.removeClass("red-border");
+                field.parent().next().addClass("hidden");
             }
         });
 
@@ -39,7 +41,7 @@ $(document).ready(function () {
 
         if (phonesInBook.indexOf(newPhone) >= 0) {
             phoneField.addClass("red-border");
-            $("#phone-field-error").text("*Контакт с номером телефона " + newPhone + " уже есть в книге").removeClass("hidden");
+            $("#phone-field-error").text("*Контакт с номером телефона \"" + newPhone + "\" уже есть в книге").removeClass("hidden");
             return;
         }
 
@@ -119,8 +121,10 @@ $(document).ready(function () {
         entries.hide();
 
         $(".last-name, .first-name, .phone").each(function () {
-            if ($(this).text().toLowerCase().indexOf(filterText) >= 0) {
-                $(this).parent().show();
+            var cell = $(this);
+
+            if (cell.text().toLowerCase().indexOf(filterText) >= 0) {
+                cell.parent().show();
             }
         });
 
