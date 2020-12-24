@@ -1,15 +1,22 @@
-Vue.component("modal", {
-    template: "#modal-template",
+Vue.component("confirm-dialog", {
+    template: "#confirm-dialog-template",
 
     data: function () {
         return {
-            onYesFunction: null
+            onYesFunction: null,
+            confirmDialogTitleText: "",
+            confirmDialogBodyText: ""
         }
     },
 
     methods: {
-        show: function (someFunction) {
+        prepare: function (someFunction, confirmDialogTitleText, confirmDialogBodyText) {
             this.onYesFunction = someFunction;
+            this.confirmDialogTitleText = confirmDialogTitleText;
+            this.confirmDialogBodyText = confirmDialogBodyText;
+        },
+
+        show: function () {
             $(this.$refs.confirmDialogTemplate).modal("show");
         },
 
@@ -25,15 +32,9 @@ new Vue({
     data: {
         contacts: [],
         newId: 1,
-        newLastName: "",
-        newFirstName: "",
-        newPhone: "",
-        hasLastName: true,
-        hasFirstName: true,
-        hasPhone: true,
-        newPhoneErrorText: "",
-        confirmDialogTitleText: "",
-        confirmDialogBodyText: "",
+        newLastName: null,
+        newFirstName: null,
+        newPhone: null,
         filterText: ""
     },
 
@@ -65,28 +66,29 @@ new Vue({
                     }
                 });
             }
+        },
+
+        newPhoneErrorText: function () {
+            return this.hasSuchPhone ? "*Контакт с указанным номером телефона уже есть в таблице" : "*Необходимо ввести телефон";
+        },
+
+        hasSuchPhone: function () {
+            var self = this;
+
+            return this.contacts.some(function (contact) {
+                return contact.phone === self.newPhone;
+            });
         }
     },
 
     methods: {
         addNewContact: function () {
-            // поверяем, что все поля формы заполнены
-            this.hasLastName = this.newLastName ? true : false;
-            this.hasFirstName = this.newFirstName ? true : false;
-            this.newPhoneErrorText = (this.hasPhone = this.newPhone ? true : false) ? "" : "*Необходимо ввести телефон";
+            this.newLastName = this.newLastName || "";
+            this.newFirstName = this.newFirstName || "";
+            this.newPhone = this.newPhone || "";
 
-            if (!this.hasLastName || !this.hasFirstName || !this.hasPhone) {
-                return;
-            }
-
-            // провеяем, что в таблице нет контакта с указанным телефоном
-            var self = this;
-
-            if (this.contacts.some(function (contact) {
-                return contact.phone === self.newPhone;
-            })) {
-                this.hasPhone = false;
-                this.newPhoneErrorText = "*Контакт с указанным номером телефона уже есть в таблице";
+            // если какое-то поле формы пустое либо указанный телефон уже есть в таблице, то не добавляем контакт
+            if (!this.newLastName || !this.newFirstName || !this.newPhone || this.hasSuchPhone) {
                 return;
             }
 
@@ -100,54 +102,45 @@ new Vue({
                 displayed: true
             });
 
-            this.newLastName = "";
-            this.newFirstName = "";
-            this.newPhone = "";
+            this.newLastName = null;
+            this.newFirstName = null;
+            this.newPhone = null;
             this.newId++;
         },
 
         clearInputData: function () {
             if (this.newLastName || this.newFirstName || this.newPhone) {
-                this.confirmDialogTitleText = "Отмена ввода";
-                this.confirmDialogBodyText = "Вы уверены, что хотите удалить введенные данные?";
-
                 var self = this;
-                this.$refs.confirmDialog.show(function () {
-                    self.newLastName = "";
-                    self.newFirstName = "";
-                    self.newPhone = "";
-                    self.hasLastName = true;
-                    self.hasFirstName = true;
-                    self.hasPhone = true;
-                });
+                this.$refs.confirmDialog.prepare(function () {
+                    self.newLastName = null;
+                    self.newFirstName = null;
+                    self.newPhone = null;
+                }, "Отмена ввода", "Вы уверены, что хотите удалить введенные данные?");
+                this.$refs.confirmDialog.show();
             }
         },
 
         deleteContact: function (contactForDelete) {
-            this.confirmDialogTitleText = "Удаление контакта";
-            this.confirmDialogBodyText = "Вы уверены, что хотите удалить контакт?";
-
             var self = this;
-            this.$refs.confirmDialog.show(function () {
+            this.$refs.confirmDialog.prepare(function () {
                 self.contacts = self.contacts.filter(function (contact) {
                     return contact !== contactForDelete;
                 });
-            });
+            }, "Удаление контакта", "Вы уверены, что хотите удалить контакт?");
+            this.$refs.confirmDialog.show();
         },
 
         deleteCheckedContacts: function () {
             if (this.contacts.some(function (contact) {
                 return contact.checked;
             })) {
-                this.confirmDialogTitleText = "Удаление контактов";
-                this.confirmDialogBodyText = "Вы уверены, что хотите удалить отмеченные контакты?";
-
                 var self = this;
-                this.$refs.confirmDialog.show(function () {
+                this.$refs.confirmDialog.prepare(function () {
                     self.contacts = self.contacts.filter(function (contact) {
                         return contact.checked !== true;
                     });
-                });
+                }, "Удаление контактов", "Вы уверены, что хотите удалить отмеченные контакты?");
+                this.$refs.confirmDialog.show();
             }
         },
 

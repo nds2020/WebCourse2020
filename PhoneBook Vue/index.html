@@ -13,30 +13,30 @@
         <div class="row mb-2">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newLastName" class="mb-1">Фамилия</label>
-                <input @input="hasLastName = true" v-model.trim="newLastName"
-                       v-bind:class="{ 'red-border': !hasLastName }"
+                <input v-model.trim="newLastName"
+                       v-bind:class="newLastName === null ? '' : newLastName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="newLastName" placeholder="Введите фамилию">
-                <div v-show="!hasLastName" class="text-danger pl-2">*Необхоимо ввести фамилию</div>
+                <div v-show="!newLastName" class="invalid-feedback pl-2">*Необхоимо ввести фамилию</div>
             </div>
         </div>
 
         <div class="row mb-2">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newFirstName" class="mb-1">Имя</label>
-                <input @input="hasFirstName = true" v-model.trim="newFirstName"
-                       v-bind:class="{ 'red-border': !hasFirstName }"
+                <input v-model.trim="newFirstName"
+                       v-bind:class="newFirstName === null ? '' : newFirstName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="newFirstName" placeholder="Введите имя">
-                <div v-show="!hasFirstName" class="text-danger pl-2">*Необхоимо ввести имя</div>
+                <div v-show="!newFirstName" class="invalid-feedback pl-2">*Необхоимо ввести имя</div>
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newPhone" class="mb-1">Телефон</label>
-                <input @input="hasPhone = true" v-model.trim="newPhone"
-                       v-bind:class="{ 'red-border': !hasPhone }"
+                <input v-model.trim="newPhone"
+                       v-bind:class="newPhone === null ? '' : (newPhone && !hasSuchPhone) ? 'is-valid' : 'is-invalid'"
                        type="tel" class="form-control" id="newPhone" placeholder="Введите телефон">
-                <div v-show="!hasPhone" class="text-danger pl-2">{{ newPhoneErrorText }}</div>
+                <div v-show="!newPhone || hasSuchPhone" class="invalid-feedback pl-2">{{ newPhoneErrorText }}</div>
             </div>
         </div>
 
@@ -106,26 +106,19 @@
         </tbody>
     </table>
 
-    <modal ref="confirmDialog">
-        <template v-slot:title>{{ confirmDialogTitleText }}</template>
-        <template v-slot:body>{{ confirmDialogBodyText }}</template>
-    </modal>
+    <confirm-dialog ref="confirmDialog"></confirm-dialog>
 </div>
-<script type="text/x-template" id="modal-template">
+<script type="text/x-template" id="confirm-dialog-template">
     <div ref="confirmDialogTemplate" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
-                        <slot name="title"></slot>
-                    </h5>
+                    <h5 class="modal-title">{{ confirmDialogTitleText }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <slot name="body"></slot>
-                </div>
+                <div class="modal-body">{{ confirmDialogBodyText }}</div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary col-3" data-dismiss="modal">Нет</button>
                     <button @click="clickYes" type="button" class="btn btn-primary col-3">Да</button>
