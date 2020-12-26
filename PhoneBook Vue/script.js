@@ -10,8 +10,8 @@ Vue.component("confirm-dialog", {
     },
 
     methods: {
-        prepare: function (someFunction, confirmDialogTitleText, confirmDialogBodyText) {
-            this.onYesFunction = someFunction;
+        prepare: function (functionOnYesButton, confirmDialogTitleText, confirmDialogBodyText) {
+            this.onYesFunction = functionOnYesButton;
             this.confirmDialogTitleText = confirmDialogTitleText;
             this.confirmDialogBodyText = confirmDialogBodyText;
         },
@@ -59,10 +59,10 @@ new Vue({
                 )
             },
 
-            set: function (boolean) {
+            set: function (checked) {
                 this.contacts.forEach(function (contact) {
                     if (contact.displayed) {
-                        contact.checked = boolean;
+                        contact.checked = checked;
                     }
                 });
             }
@@ -74,7 +74,6 @@ new Vue({
 
         hasSuchPhone: function () {
             var self = this;
-
             return this.contacts.some(function (contact) {
                 return contact.phone === self.newPhone;
             });
@@ -155,7 +154,7 @@ new Vue({
                     contact.checked = false;
                 } else {
                     // чтобы не нажимать кнопку "Сбросить", если хотим, чтобы после удаления символа(ов)
-                    // в строке фильтра и повторной фильтрации отобразились ранее скрытые контакты, если
+                    // в поле фильтра и повторной фильтрации отобразились ранее скрытые контакты, если
                     // они удовлетворяют фильтру.
                     contact.displayed = true;
                 }

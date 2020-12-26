@@ -14,7 +14,7 @@
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newLastName" class="mb-1">Фамилия</label>
                 <input v-model.trim="newLastName"
-                       v-bind:class="newLastName === null ? '' : newLastName ? 'is-valid' : 'is-invalid'"
+                       :class="newLastName === null ? '' : newLastName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="newLastName" placeholder="Введите фамилию">
                 <div v-show="!newLastName" class="invalid-feedback pl-2">*Необхоимо ввести фамилию</div>
             </div>
@@ -24,7 +24,7 @@
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newFirstName" class="mb-1">Имя</label>
                 <input v-model.trim="newFirstName"
-                       v-bind:class="newFirstName === null ? '' : newFirstName ? 'is-valid' : 'is-invalid'"
+                       :class="newFirstName === null ? '' : newFirstName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="newFirstName" placeholder="Введите имя">
                 <div v-show="!newFirstName" class="invalid-feedback pl-2">*Необхоимо ввести имя</div>
             </div>
@@ -34,7 +34,7 @@
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="newPhone" class="mb-1">Телефон</label>
                 <input v-model.trim="newPhone"
-                       v-bind:class="newPhone === null ? '' : (newPhone && !hasSuchPhone) ? 'is-valid' : 'is-invalid'"
+                       :class="newPhone === null ? '' : (newPhone && !hasSuchPhone) ? 'is-valid' : 'is-invalid'"
                        type="tel" class="form-control" id="newPhone" placeholder="Введите телефон">
                 <div v-show="!newPhone || hasSuchPhone" class="invalid-feedback pl-2">{{ newPhoneErrorText }}</div>
             </div>
@@ -88,7 +88,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="(contact, index) in contacts" :key="contact.id" v-bind:class="{ 'd-none': !contact.displayed }">
+        <tr v-for="(contact, index) in contacts" :key="contact.id" :class="{ 'd-none': !contact.displayed }">
             <td @click="contact.checked = !contact.checked">
                 <!--suppress HtmlFormInputWithoutLabel -->
                 <input type="checkbox" v-model="contact.checked">
@@ -108,6 +108,7 @@
 
     <confirm-dialog ref="confirmDialog"></confirm-dialog>
 </div>
+
 <script type="text/x-template" id="confirm-dialog-template">
     <div ref="confirmDialogTemplate" class="modal" tabindex="-1">
         <div class="modal-dialog">
@@ -127,6 +128,7 @@
         </div>
     </div>
 </script>
+
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="node_modules/vue/dist/vue.js"></script>
