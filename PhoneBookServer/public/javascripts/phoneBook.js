@@ -26,25 +26,27 @@ function PhoneBookService() {
     };
 }
 
-Vue.component("modal", {
-    props: {
-        isConfirmDialog: {
-            type: Boolean,
-            required: true
-        }
-    },
-
+Vue.component("modal-dialog", {
     data: function () {
         return {
-            onYesFunction: null
+            onYesFunction: null,
+            dialogTitleText: "",
+            dialogBodyText: "",
+            isConfirmDialog: false
         }
     },
 
     template: "#modal-template",
 
     methods: {
-        show: function (someFunction) {
-            this.onYesFunction = someFunction;
+        prepare: function (isConfirmDialog, dialogTitleText, dialogBodyText, functionOnYesButton) {
+            this.isConfirmDialog = isConfirmDialog;
+            this.dialogTitleText = dialogTitleText;
+            this.dialogBodyText = dialogBodyText;
+            this.onYesFunction = functionOnYesButton;
+        },
+
+        show: function () {
             $(this.$refs.dialogTemplate).modal("show");
         },
 
@@ -60,14 +62,10 @@ new Vue({
 
     data: {
         contacts: [],
-        checkedContactsIds: [],
         lastName: null,
         firstName: null,
         phone: null,
         term: "",
-        dialogTitleText: "",
-        dialogBodyText: "",
-        isConfirmDialog: true,
         service: new PhoneBookService()
     },
 
@@ -76,7 +74,15 @@ new Vue({
     },
 
     computed: {
-        checkedTheadCheckbox: {
+        checkedContactsIds: function () {
+            return this.contacts.filter(function (contact) {
+                return contact.checked
+            }).map(function (contact) {
+                return contact.id;
+            });
+        },
+
+        isTheadCheckboxChecked: {
             get: function () {
                 return (
                     this.contacts.length > 0
@@ -87,42 +93,26 @@ new Vue({
                 )
             },
 
-            set: function (boolean) {
+            set: function (checked) {
                 this.contacts.forEach(function (contact) {
-                    contact.checked = boolean;
+                    contact.checked = checked;
                 });
             }
         }
     },
 
     methods: {
-        prepareDialog: function (boolean, dialogTitleText, dialogBodyText) {
-            this.isConfirmDialog = boolean;
-            this.dialogTitleText = dialogTitleText;
-            this.dialogBodyText = dialogBodyText;
-        },
-
-        fillCheckedContactsIds: function () {
-            this.checkedContactsIds = this.contacts.filter(function (contact) {
-                return contact.checked
-            }).map(function (contact) {
-                return contact.id;
-            });
-        },
-
         loadContacts: function () {
-            this.fillCheckedContactsIds();
-
             var self = this;
             this.service.getContacts(this.term).done(function (response) {
-                self.contacts = response;
-                self.contacts.forEach(function (contact) {
+                response.forEach(function (contact) {
                     if (self.checkedContactsIds.includes(contact.id)) {
                         contact.checked = true;
                     }
                 });
+                self.contacts = response;
             }).fail(function () {
-                self.prepareDialog(false, "Ошибка сервера", "Не удалось загрузить список контактов");
+                self.$refs.modalDialog.prepare(false, "Ошибка сервера", "Не удалось загрузить список контактов");
                 self.$refs.modalDialog.show();
             });
         },
@@ -133,9 +123,9 @@ new Vue({
         },
 
         addNewContact: function () {
-            this.lastName = this.lastName ? this.lastName : "";
-            this.firstName = this.firstName ? this.firstName : "";
-            this.phone = this.phone ? this.phone : "";
+            this.lastName = this.lastName || "";
+            this.firstName = this.firstName || "";
+            this.phone = this.phone || "";
 
             if (!this.lastName || !this.firstName || !this.phone) {
                 return;
@@ -151,7 +141,7 @@ new Vue({
             var self = this;
             this.service.addContact(newContact).done(function (response) {
                 if (!response.success) {
-                    self.prepareDialog(false, "Ошибка", response.message);
+                    self.$refs.modalDialog.prepare(false, "Ошибка", response.message);
                     self.$refs.modalDialog.show();
                     return;
                 }
@@ -162,55 +152,62 @@ new Vue({
 
                 self.loadContacts();
             }).fail(function () {
-                self.prepareDialog(false, "Ошибка сервера", "Не удалось добавить контакт");
+                self.$refs.modalDialog.prepare(false, "Ошибка сервера", "Не удалось добавить контакт");
                 self.$refs.modalDialog.show();
             });
         },
 
         clearForm: function () {
             if (this.lastName || this.firstName || this.phone) {
-                this.prepareDialog(true, "Отмена ввода", "Вы уверены, что хотите удалить введенные данные?");
-
                 var self = this;
-                this.$refs.modalDialog.show(function () {
-                    self.lastName = null;
-                    self.firstName = null;
-                    self.phone = null;
-                });
+                this.$refs.modalDialog.prepare(
+                    true, "Отмена ввода", "Вы уверены, что хотите удалить введенные данные?", function () {
+                        self.lastName = null;
+                        self.firstName = null;
+                        self.phone = null;
+                    }
+                );
+                this.$refs.modalDialog.show();
             }
         },
 
         deleteContact: function (contact) {
-            this.prepareDialog(true, "Удаление контакта", "Вы уверены, что хотите удалить контакт?");
-            this.delete([contact.id]);
+            var self = this;
+            this.$refs.modalDialog.prepare(
+                true, "Удаление контакта", "Вы уверены, что хотите удалить контакт?", function () {
+                    self.delete([contact.id]);
+                }
+            );
+            this.$refs.modalDialog.show();
         },
 
         deleteCheckedContacts: function () {
-            this.fillCheckedContactsIds();
-
             if (this.checkedContactsIds.length === 0) {
                 return;
             }
 
-            this.prepareDialog(true, "Удаление контактов", "Вы уверены, что хотите удалить отмеченные контакты?");
-            this.delete(this.checkedContactsIds);
+            var self = this;
+            this.$refs.modalDialog.prepare(
+                true, "Удаление контактов", "Вы уверены, что хотите удалить отмеченные контакты?", function () {
+                    self.delete(self.checkedContactsIds);
+                }
+            );
+            this.$refs.modalDialog.show();
         },
 
         delete: function (arrayOfIds) {
             var self = this;
-            this.$refs.modalDialog.show(function () {
-                self.service.deleteContacts(arrayOfIds).done(function (response) {
-                    if (!response.success) {
-                        self.prepareDialog(false, "Ошибка", response.message);
-                        self.$refs.modalDialog.show();
-                        return;
-                    }
-
-                    self.loadContacts();
-                }).fail(function () {
-                    self.prepareDialog(false, "Ошибка сервера", "Не удалось удалить контакт(ы)");
+            this.service.deleteContacts(arrayOfIds).done(function (response) {
+                if (!response.success) {
+                    self.$refs.modalDialog.prepare(false, "Ошибка", response.message);
                     self.$refs.modalDialog.show();
-                });
+                    return;
+                }
+
+                self.loadContacts();
+            }).fail(function () {
+                self.$refs.modalDialog.prepare(false, "Ошибка сервера", "Не удалось удалить контакт(ы)");
+                self.$refs.modalDialog.show();
             });
         }
     }

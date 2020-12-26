@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="1. Переписал логику проверки полей формы.&#10;2. Теперь ошибка поля ввода телефона появлется и ее текст меняется динамически, когда вводим телефон в поле.&#10;3. Перенес в компонент свойства confirmDialogTitleText, confirmDialogBodyText.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook Vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook Vue/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook Vue/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook Vue/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookServer/public/javascripts/phoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookServer/public/javascripts/phoneBook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookServer/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookServer/views/index.twig" afterDir="false" />
     </list>
@@ -165,7 +163,7 @@
       <workItem from="1608026907544" duration="109969000" />
       <workItem from="1608630373002" duration="43287000" />
       <workItem from="1608857749123" duration="2457000" />
-      <workItem from="1608958098701" duration="780000" />
+      <workItem from="1608958098701" duration="2385000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -475,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608796092617</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="в index поправил директиву v-bind, добавил пустые строки для читаемости;&#10;в script переименовал некоторые переменные.">
+      <created>1608960769187</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1608960769187</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +499,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Сделал задачу TODO List" />
     <MESSAGE value="1. Исправил опечатку в сonvertButtonInitialContent&#10;2. Код теперь работает со свойствами DOM-элементов вместо атрибутов" />
     <MESSAGE value="Множество исправлений" />
     <MESSAGE value="Сделал задачу PhoneBook" />
@@ -519,7 +523,8 @@
     <MESSAGE value="Изменил анимацию полей ввода формы:&#10;- если начать вводить символы, то граница поля становится зеленой, и появляется галочка;&#10;- если удалить все символы, то граница поля становится красной, и появляется восклицательный знак.&#10;В тоже время при загрузке страницы анимации нет, а также она пропадает после добавления контакта либо при очистке полей ввода кнопкой &quot;Очистить&quot; (если было заполнено хотя бы одно поле)." />
     <MESSAGE value="В скрипте там, где много раз в функции используется $(this), добавил переменную." />
     <MESSAGE value="1. Переписал логику проверки полей формы.&#10;2. Теперь ошибка поля ввода телефона появлется и ее текст меняется динамически, когда вводим телефон в поле.&#10;3. Перенес в компонент свойства confirmDialogTitleText, confirmDialogBodyText." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Переписал логику проверки полей формы.&#10;2. Теперь ошибка поля ввода телефона появлется и ее текст меняется динамически, когда вводим телефон в поле.&#10;3. Перенес в компонент свойства confirmDialogTitleText, confirmDialogBodyText." />
+    <MESSAGE value="в index поправил директиву v-bind, добавил пустые строки для читаемости;&#10;в script переименовал некоторые переменные." />
+    <option name="LAST_COMMIT_MESSAGE" value="в index поправил директиву v-bind, добавил пустые строки для читаемости;&#10;в script переименовал некоторые переменные." />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -563,35 +568,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1608821368356">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1608960987636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608821368356" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1608821368356">
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1608960987636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608821368356" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1608821368356">
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1608960987636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608821368356" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241809" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1608821368356">
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1608960987636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608821368356" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
     <state x="350" y="20" width="927" height="708" key="SettingsEditor" timestamp="1608736665832">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="20" width="927" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608736665832" />
     <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1608796101540">
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1608960775739">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608796101540" />
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608960775739" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607595245338" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -8,7 +8,7 @@
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="lastName" class="mb-1">Фамилия</label>
                 <input v-model.trim="lastName"
-                       v-bind:class="lastName === null ? '' : lastName ? 'is-valid' : 'is-invalid'"
+                       :class="lastName === null ? '' : lastName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="lastName" placeholder="Введите фамилию">
                 <div v-show="!lastName" class="invalid-feedback pl-2">*Необхоимо ввести фамилию</div>
             </div>
@@ -18,7 +18,7 @@
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="firstName" class="mb-1">Имя</label>
                 <input v-model.trim="firstName"
-                       v-bind:class="firstName === null ? '' : firstName ? 'is-valid' : 'is-invalid'"
+                       :class="firstName === null ? '' : firstName ? 'is-valid' : 'is-invalid'"
                        type="text" class="form-control" id="firstName" placeholder="Введите имя">
                 <div v-show="!firstName" class="invalid-feedback pl-2">*Необхоимо ввести имя</div>
             </div>
@@ -28,7 +28,7 @@
             <div class="col-md-10 col-lg-8 m-0">
                 <label for="phone" class="mb-1">Телефон</label>
                 <input v-model.trim="phone"
-                       v-bind:class="phone === null ? '' : phone ? 'is-valid' : 'is-invalid'"
+                       :class="phone === null ? '' : phone ? 'is-valid' : 'is-invalid'"
                        type="tel" class="form-control" id="phone" placeholder="Введите телефон">
                 <div v-show="!phone" class="invalid-feedback pl-2">*Необходимо ввести телефон</div>
             </div>
@@ -66,9 +66,9 @@
     <table class="table table-hover">
         <thead>
         <tr class="table-active">
-            <th @click="checkedTheadCheckbox = !checkedTheadCheckbox">
+            <th @click="isTheadCheckboxChecked = !isTheadCheckboxChecked">
                 <!--suppress HtmlFormInputWithoutLabel -->
-                <input v-model="checkedTheadCheckbox" type="checkbox" id="theadCheckbox">
+                <input v-model="isTheadCheckboxChecked" type="checkbox" id="theadCheckbox">
             </th>
             <th>№</th>
             <th>Фамилия</th>
@@ -100,26 +100,20 @@
         </tbody>
     </table>
 
-    <modal ref="modalDialog" :is-confirm-dialog="isConfirmDialog">
-        <template v-slot:title>{{ dialogTitleText }}</template>
-        <template v-slot:body>{{ dialogBodyText }}</template>
-    </modal>
+    <modal-dialog ref="modalDialog"></modal-dialog>
 </div>
+
 <script type="text/x-template" id="modal-template">
     <div ref="dialogTemplate" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
-                        <slot name="title"></slot>
-                    </h5>
+                    <h5 class="modal-title">{{ dialogTitleText }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <slot name="body"></slot>
-                </div>
+                <div class="modal-body">{{ dialogBodyText }}</div>
                 <div class="modal-footer">
                     <template v-if="isConfirmDialog">
                         <button type="button" class="btn btn-secondary col-3" data-dismiss="modal">Нет</button>
