@@ -50,12 +50,12 @@ new Vue({
 
             this.hasInputText = true;
             this.newTodoText = "";
-            this.newId++
+            this.newId++;
         },
 
         deleteItem: function (itemForDelete, confirmDialogTitleText, confirmDialogBodyText) {
-            this.confirmDialogTitleText = confirmDialogTitleText ? confirmDialogTitleText : "Удаление задания";
-            this.confirmDialogBodyText = confirmDialogBodyText ? confirmDialogBodyText : "Вы уверены, что хотите удалить задание?";
+            this.confirmDialogTitleText = confirmDialogTitleText || "Удаление задания";
+            this.confirmDialogBodyText = confirmDialogBodyText || "Вы уверены, что хотите удалить задание?";
 
             var self = this;
             this.$refs.confirmDialog.show(function () {

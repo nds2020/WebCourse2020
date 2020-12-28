@@ -16,7 +16,7 @@
             <div class="col p-0">
                 <!--suppress HtmlFormInputWithoutLabel -->
                 <textarea v-model="newTodoText" class="form-control" rows="4" placeholder="Напишите задание"></textarea>
-                <p v-bind:class="{ invisible: hasInputText }" class="text-danger pl-2">*Пожалуйста, напишите задание</p>
+                <p :class="{ invisible: hasInputText }" class="text-danger pl-2">*Пожалуйста, напишите задание</p>
             </div>
             <div class="col-auto pr-0">
                 <button @click="addNewTodoItem" type="button" class="btn btn-block btn-primary">Добавить</button>
