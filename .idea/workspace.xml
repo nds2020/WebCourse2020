@@ -19,10 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="1. Переписал логику проверки полей формы.&#10;2. Теперь ошибка поля ввода телефона появлется и ее текст меняется динамически, когда вводим телефон в поле.&#10;3. Перенес в компонент свойства confirmDialogTitleText, confirmDialogBodyText.">
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="удалил лишнее">
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/src/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/src/js/ConfirmDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/src/js/PhoneBook.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/src/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/src/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook Webpack/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookServer/public/javascripts/phoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookServer/public/javascripts/phoneBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookServer/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookServer/views/index.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +44,7 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -55,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/PhoneBookServer/routes/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List Vue/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List Vue/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PhoneBook Webpack/src/js/main.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List jQuery/style.css" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Работа с объектами/script.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Task Underscore/script.js" root0="SKIP_INSPECTION" />
@@ -63,6 +71,7 @@
     <setting file="file://$PROJECT_DIR$/TODO List Bootstrap/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/PhoneBook Vue/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/PhoneBook Webpack/webpack.config.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/PhoneBookServer/public/javascripts/phoneBook.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/TODO List jQuery/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/PhoneBookServer/views/layout.twig" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
@@ -91,28 +100,77 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src\html" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src\scss" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src\js" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\TodoList jQuery" />
       <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\Перевод температур" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.serve (2)">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/PhoneBookServer/package.json" />
+    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/PhoneBook Webpack/src/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build (2)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/PhoneBook Webpack/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/PhoneBook Webpack/src/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve (2)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/PhoneBook Webpack/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/PhoneBook Webpack/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -120,7 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
+        <item itemvalue="npm.serve (2)" />
+        <item itemvalue="npm.build (2)" />
+        <item itemvalue="npm.serve (1)" />
+        <item itemvalue="npm.build (1)" />
+        <item itemvalue="npm.serve" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +225,8 @@
       <workItem from="1608026907544" duration="109969000" />
       <workItem from="1608630373002" duration="43287000" />
       <workItem from="1608857749123" duration="2457000" />
-      <workItem from="1608958098701" duration="2385000" />
+      <workItem from="1608958098701" duration="22031000" />
+      <workItem from="1609122950465" duration="31146000" />
     </task>
     <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855874456</created>
@@ -480,7 +543,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608960769187</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="1. Перенес в компонент свойства dialogTitleText, dialogBodyText.&#10;2. Добавил компоненту метод prepare.&#10;3. Свойство checkedContactsIds теперь вычисляемое.&#10;4. Исправления синтаксиса.">
+      <created>1608962608758</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1608962608758</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Исправления синтаксиса">
+      <created>1609123288295</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1609123288295</updated>
+    </task>
+    <task id="LOCAL-00048" summary="удалил лишнее">
+      <created>1609147945760</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1609147945760</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,9 +583,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1. Исправил опечатку в сonvertButtonInitialContent&#10;2. Код теперь работает со свойствами DOM-элементов вместо атрибутов" />
-    <MESSAGE value="Множество исправлений" />
-    <MESSAGE value="Сделал задачу PhoneBook" />
     <MESSAGE value="Сделал задачу Underscore" />
     <MESSAGE value="trim() теперь из jQuery" />
     <MESSAGE value="Сделал задачу TodoList jQuery" />
@@ -524,7 +605,10 @@
     <MESSAGE value="В скрипте там, где много раз в функции используется $(this), добавил переменную." />
     <MESSAGE value="1. Переписал логику проверки полей формы.&#10;2. Теперь ошибка поля ввода телефона появлется и ее текст меняется динамически, когда вводим телефон в поле.&#10;3. Перенес в компонент свойства confirmDialogTitleText, confirmDialogBodyText." />
     <MESSAGE value="в index поправил директиву v-bind, добавил пустые строки для читаемости;&#10;в script переименовал некоторые переменные." />
-    <option name="LAST_COMMIT_MESSAGE" value="в index поправил директиву v-bind, добавил пустые строки для читаемости;&#10;в script переименовал некоторые переменные." />
+    <MESSAGE value="1. Перенес в компонент свойства dialogTitleText, dialogBodyText.&#10;2. Добавил компоненту метод prepare.&#10;3. Свойство checkedContactsIds теперь вычисляемое.&#10;4. Исправления синтаксиса." />
+    <MESSAGE value="Исправления синтаксиса" />
+    <MESSAGE value="удалил лишнее" />
+    <option name="LAST_COMMIT_MESSAGE" value="удалил лишнее" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -539,6 +623,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1603473811477" />
+    <state x="441" y="59" key="#SCSS" timestamp="1609165683098">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="441" y="59" key="#SCSS/0.0.1366.728@0.0.1366.728" timestamp="1609165683098" />
+    <state x="485" y="72" key="#Vue" timestamp="1609141064411">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="485" y="72" key="#Vue/0.0.1366.728@0.0.1366.728" timestamp="1609141064411" />
     <state x="733" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606703959136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -568,35 +660,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1608960987636">
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom" timestamp="1609166432948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609166432948" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1608960987636">
+    <state width="1323" height="196" key="GridCell.Tab.0.center" timestamp="1609166432948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
+    <state width="1323" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609166432948" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1608960987636">
+    <state width="1323" height="196" key="GridCell.Tab.0.left" timestamp="1609166432948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
+    <state width="1323" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609166432948" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241809" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1608960987636">
+    <state width="1323" height="196" key="GridCell.Tab.0.right" timestamp="1609166432948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608960987636" />
+    <state width="1323" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609166432948" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606305241810" />
     <state x="350" y="20" width="927" height="708" key="SettingsEditor" timestamp="1608736665832">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="20" width="927" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608736665832" />
     <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1608960775739">
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1609147955128">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608960775739" />
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609147955128" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607595245338" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
