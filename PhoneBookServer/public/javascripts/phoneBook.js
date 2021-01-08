@@ -106,7 +106,7 @@ new Vue({
             var self = this;
             this.service.getContacts(this.term).done(function (response) {
                 response.forEach(function (contact) {
-                    if (self.checkedContactsIds.includes(contact.id)) {
+                    if (self.checkedContactsIds.indexOf(contact.id) >= 0) {
                         contact.checked = true;
                     }
                 });
