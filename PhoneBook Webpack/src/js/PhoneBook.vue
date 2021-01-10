@@ -3,30 +3,30 @@
         <div class="form mb-2">
             <div class="row mb-2">
                 <div class="col-md-10 col-lg-8 m-0">
-                    <label for="newLastName" class="mb-1">Фамилия</label>
+                    <label for="new-last-name" class="mb-1">Фамилия</label>
                     <input v-model.trim="newLastName"
                            :class="newLastName === null ? '' : newLastName ? 'is-valid' : 'is-invalid'"
-                           type="text" class="form-control" id="newLastName" placeholder="Введите фамилию">
-                    <div v-show="!newLastName" class="invalid-feedback pl-2">*Необхоимо ввести фамилию</div>
+                           type="text" class="form-control" id="new-last-name" placeholder="Введите фамилию">
+                    <div v-show="!newLastName" class="invalid-feedback pl-2">*Необходимо ввести фамилию</div>
                 </div>
             </div>
 
             <div class="row mb-2">
                 <div class="col-md-10 col-lg-8 m-0">
-                    <label for="newFirstName" class="mb-1">Имя</label>
+                    <label for="new-first-name" class="mb-1">Имя</label>
                     <input v-model.trim="newFirstName"
                            :class="newFirstName === null ? '' : newFirstName ? 'is-valid' : 'is-invalid'"
-                           type="text" class="form-control" id="newFirstName" placeholder="Введите имя">
-                    <div v-show="!newFirstName" class="invalid-feedback pl-2">*Необхоимо ввести имя</div>
+                           type="text" class="form-control" id="new-first-name" placeholder="Введите имя">
+                    <div v-show="!newFirstName" class="invalid-feedback pl-2">*Необходимо ввести имя</div>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-10 col-lg-8 m-0">
-                    <label for="newPhone" class="mb-1">Телефон</label>
+                    <label for="new-phone" class="mb-1">Телефон</label>
                     <input v-model.trim="newPhone"
                            :class="newPhone === null ? '' : (newPhone && !hasSuchPhone) ? 'is-valid' : 'is-invalid'"
-                           type="tel" class="form-control" id="newPhone" placeholder="Введите телефон">
+                           type="tel" class="form-control" id="new-phone" placeholder="Введите телефон">
                     <div v-show="!newPhone || hasSuchPhone" class="invalid-feedback pl-2">{{ newPhoneErrorText }}</div>
                 </div>
             </div>
@@ -44,9 +44,9 @@
         <div class="filter mb-2">
             <div class="row">
                 <div class="col-md-10 col-lg-8">
-                    <label for="filterField" class="mb-1">Фильтр</label>
+                    <label for="filter-field" class="mb-1">Фильтр</label>
                     <input v-model="filterText" @keypress.enter="applyFilter"
-                           type="text" class="form-control mb-1" id="filterField" placeholder="Введите значение">
+                           type="text" class="form-control mb-1" id="filter-field" placeholder="Введите значение">
                 </div>
             </div>
 
@@ -63,9 +63,9 @@
         <table class="table table-hover">
             <thead>
             <tr class="table-active">
-                <th @click="checkedTheadCheckbox = !checkedTheadCheckbox">
+                <th>
                     <!--suppress HtmlFormInputWithoutLabel -->
-                    <input v-model="checkedTheadCheckbox" type="checkbox" id="theadCheckbox">
+                    <input v-model="isCheckAllCheckboxChecked" type="checkbox" title="Выбрать все">
                 </th>
                 <th>№</th>
                 <th>Фамилия</th>
@@ -73,14 +73,14 @@
                 <th>Номер телефона</th>
                 <th>
                     <button @click="deleteCheckedContacts" type="button" class="btn btn-sm btn-danger"
-                            title="Удалить отмеченные">&#215;
+                            title="Удалить выбранные">&#215;
                     </button>
                 </th>
             </tr>
             </thead>
             <tbody>
             <tr v-for="(contact, index) in contacts" :key="contact.id" :class="{ 'd-none': !contact.displayed }">
-                <td @click="contact.checked = !contact.checked">
+                <td>
                     <!--suppress HtmlFormInputWithoutLabel -->
                     <input type="checkbox" v-model="contact.checked">
                 </td>
@@ -113,7 +113,7 @@ export default {
             newFirstName: null,
             newPhone: null,
             filterText: ""
-        }
+        };
     },
 
     components: {
@@ -121,10 +121,10 @@ export default {
     },
 
     computed: {
-        checkedTheadCheckbox: {
+        isCheckAllCheckboxChecked: {
             get() {
                 const filteredContacts = this.contacts.filter(contact => contact.displayed);
-                return filteredContacts.length > 0 && filteredContacts.every(contact => contact.checked)
+                return filteredContacts.length > 0 && filteredContacts.every(contact => contact.checked);
             },
 
             set(checked) {
@@ -196,7 +196,7 @@ export default {
             if (this.contacts.some(contact => contact.checked)) {
                 this.$refs.confirmDialog.prepare(
                     () => this.contacts = this.contacts.filter(contact => contact.checked !== true),
-                    "Удаление контактов", "Вы уверены, что хотите удалить отмеченные контакты?");
+                    "Удаление контактов", "Вы уверены, что хотите удалить выбранные контакты?");
                 this.$refs.confirmDialog.show();
             }
         },

@@ -27,7 +27,7 @@ export default {
             onYesFunction: null,
             confirmDialogTitleText: "",
             confirmDialogBodyText: ""
-        }
+        };
     },
 
     methods: {

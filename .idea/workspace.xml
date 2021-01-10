@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="Сделал задачу Webpack">
+    <list default="true" id="dc976dba-61dd-4cfc-a880-7f49429d2748" name="Default Changelist" comment="заменил includes на indexOf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookServer/public/javascripts/phoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookServer/public/javascripts/phoneBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook Webpack/src/js/ConfirmDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook Webpack/src/js/ConfirmDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook Webpack/src/js/PhoneBook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook Webpack/src/js/PhoneBook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
         <option value="HTML File" />
-        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -82,7 +83,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PhoneBook/node_modules/jquery" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PhoneBookWebpack/src/html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -93,42 +96,40 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\TodoList jQuery" />
-      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\Перевод температур" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src\html" />
-      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src\scss" />
-      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src\js" />
-      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack\src" />
-      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBook Webpack" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\src" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\src\scss" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\src\js" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\src\html" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\src\html" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\temp\src\html" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\views" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\src\js" />
+      <recent name="C:\Users\Вакуленко\IdeaProjects\WebCourse2020\PhoneBookWebpack\src\scss" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.serve (2)">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="build (2)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/PhoneBook Webpack/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebCourse2020/PhoneBookWebpack/public/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/Vuetify/package.json" />
+      <package-json value="$PROJECT_DIR$/PhoneBookWebpack/src/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
@@ -147,8 +148,8 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="serve (3)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/Vuetify/package.json" />
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/PhoneBookWebpack/src/package.json" />
       <command value="run" />
       <scripts>
         <script value="serve" />
@@ -157,8 +158,8 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/PhoneBookServer/package.json" />
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/PhoneBookWebpack/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
@@ -169,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.serve (3)" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.build (2)" />
         <item itemvalue="npm.serve (2)" />
+        <item itemvalue="npm.serve" />
+        <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -220,14 +221,8 @@
       <workItem from="1609122950465" duration="33251000" />
       <workItem from="1609216095715" duration="1253000" />
       <workItem from="1609236884069" duration="890000" />
-      <workItem from="1609519618005" duration="8853000" />
-    </task>
-    <task id="LOCAL-00001" summary="добавил тэги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
-      <created>1603855874456</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1603855874456</updated>
+      <workItem from="1609519618005" duration="25189000" />
+      <workItem from="1610195645377" duration="19901000" />
     </task>
     <task id="LOCAL-00002" summary="добавил теги &lt;thead&gt; &lt;tbody&gt; в Cars.html">
       <created>1603855991377</created>
@@ -565,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609167947610</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="заменил includes на indexOf">
+      <created>1610081521600</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1610081521600</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +586,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trim() теперь из jQuery" />
     <MESSAGE value="Сделал задачу TodoList jQuery" />
     <MESSAGE value="Сделал задачу Bootstrap" />
     <MESSAGE value="Переписал 2ю подзадачу" />
@@ -609,7 +610,8 @@
     <MESSAGE value="Исправления синтаксиса" />
     <MESSAGE value="удалил лишнее" />
     <MESSAGE value="Сделал задачу Webpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал задачу Webpack" />
+    <MESSAGE value="заменил includes на indexOf" />
+    <option name="LAST_COMMIT_MESSAGE" value="заменил includes на indexOf" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1607094610527">
@@ -661,36 +663,36 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603641128805" />
-    <state width="1877" height="307" key="GridCell.Tab.0.bottom" timestamp="1610081003516">
+    <state width="1877" height="307" key="GridCell.Tab.0.bottom" timestamp="1610291464859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609170224843" />
-    <state width="1877" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610081003516" />
-    <state width="1877" height="307" key="GridCell.Tab.0.center" timestamp="1610081003515">
+    <state width="1877" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610291464859" />
+    <state width="1877" height="307" key="GridCell.Tab.0.center" timestamp="1610291464859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609170224842" />
-    <state width="1877" height="307" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610081003515" />
-    <state width="1877" height="307" key="GridCell.Tab.0.left" timestamp="1610081003515">
+    <state width="1877" height="307" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610291464859" />
+    <state width="1877" height="307" key="GridCell.Tab.0.left" timestamp="1610291464859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609170224842" />
-    <state width="1877" height="307" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610081003515" />
-    <state width="1877" height="307" key="GridCell.Tab.0.right" timestamp="1610081003516">
+    <state width="1877" height="307" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610291464859" />
+    <state width="1877" height="307" key="GridCell.Tab.0.right" timestamp="1610291464859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609170224842" />
-    <state width="1877" height="307" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610081003516" />
+    <state width="1877" height="307" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610291464859" />
     <state x="350" y="20" width="927" height="708" key="SettingsEditor" timestamp="1608736665832">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="20" width="927" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608736665832" />
     <state x="492" y="189" width="1302" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607186549536" />
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1609167982018">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610081526667">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609167982018" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607595245338" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610081526667" />
     <state x="749" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606301169719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
